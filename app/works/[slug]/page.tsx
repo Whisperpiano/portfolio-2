@@ -1,7 +1,11 @@
 import { PROJECTS } from '@/lib/data/projects';
 import { notFound } from 'next/navigation';
 
-export default async function Work({ params }: { params: { slug: string } }) {
+export default async function Work({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const project = PROJECTS.find((project) => project.slug === slug);
 
