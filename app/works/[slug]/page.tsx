@@ -22,6 +22,7 @@ export default async function Work({
       <img src={project?.image} alt={project?.title} />
       <a href={project?.link}>Link</a>
       <p>test</p>
+      <p>test2</p>
     </section>
   );
 }
