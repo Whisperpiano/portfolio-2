@@ -17,6 +17,7 @@ export default async function Work({ params }: { params: { slug: string } }) {
       <p>{project?.description}</p>
       <img src={project?.image} alt={project?.title} />
       <a href={project?.link}>Link</a>
+      <p>test</p>
     </section>
   );
 }
