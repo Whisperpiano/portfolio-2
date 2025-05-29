@@ -9,24 +9,14 @@ export default function Template({ children }: { children: React.ReactNode }) {
 
   return (
     <motion.div
-      initial={
-        isHomePage
-          ? { x: 200, opacity: 0, filter: 'blur(18px)' }
-          : { x: -200, opacity: 0, filter: 'blur(18px)' }
-      }
-      animate={{
-        x: 0,
-        opacity: 1,
-        filter: 'blur(0px)',
-      }}
-      exit={
-        isHomePage
-          ? { x: -200, opacity: 0, filter: 'blur(18px)' }
-          : { x: 200, opacity: 0, filter: 'blur(18px)' }
-      }
+      key={pathname}
+      initial={isHomePage ? { y: 30, opacity: 0 } : { x: -50, opacity: 0 }}
+      animate={isHomePage ? { y: 0, opacity: 1 } : { x: 0, opacity: 1 }}
       transition={{
-        duration: 0.6,
-        filter: { duration: 0.3 },
+        type: 'spring',
+        stiffness: 260,
+        damping: 30,
+        mass: 1,
       }}
     >
       {children}
