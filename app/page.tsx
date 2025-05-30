@@ -1,14 +1,134 @@
-import { Button } from '@/components/ui/button';
+import {
+  FaEnvelope,
+  FaFacebook,
+  FaGithub,
+  FaInstagram,
+  FaLinkedin,
+  FaXTwitter,
+} from 'react-icons/fa6';
+
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
+import Image from 'next/image';
+import { ArrowUpRight } from 'lucide-react';
+
+const SOCIALS = [
+  {
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/in/jesus',
+    class: 'hover:bg-[#0077B575]',
+    icon: FaLinkedin,
+  },
+  {
+    name: 'GitHub',
+    href: 'https://github.com/jesus',
+    class: 'hover:bg-[#24292e75]',
+    icon: FaGithub,
+  },
+  {
+    name: 'Email',
+    href: 'mailto:jesus@jesus.com',
+    class: 'hover:bg-[#D1483675]',
+    icon: FaEnvelope,
+  },
+
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/jesus',
+    class: 'hover:bg-[#E1306C75]',
+    icon: FaInstagram,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/jesus',
+    class: 'hover:bg-[#1877F275]',
+    icon: FaFacebook,
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/jesus',
+    class: 'hover:bg-[#1DA1F275]',
+    icon: FaXTwitter,
+  },
+];
 
 export default function Home() {
   return (
-    <main>
-      <h1>Home</h1>
-      <Button>Button</Button>
-      <Link href="/works/saas-platform">saas-platform</Link>
-      <Link href="/works/ecommerce-dashboard">ecommerce-dashboard</Link>
-      <Link href="/works/portfolio-website">portfolio-website</Link>
+    <main className="h-full max-h-dvh min-h-dvh p-4">
+      <section className="grid grid-cols-7 gap-4 rounded-3xl border-2 p-4">
+        {/* Intro card */}
+        <Card className="bg-muted-foreground/3 col-span-4 rounded-3xl px-6 py-0">
+          <CardContent className="flex h-full flex-col justify-center gap-4 rounded-3xl">
+            <h1 className="text-primary text-3xl font-medium">
+              Hey there! I&apos;m Jesús
+            </h1>
+            <p className="text-muted-foreground/50 text-xl">
+              A front-end developer, piano teacher and music composer making
+              magic happen in Stavanger, Norway
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Social card */}
+        <Card className="col-span-3 border-0 bg-transparent py-0">
+          <CardContent className="grid grid-cols-3 gap-4 rounded-3xl p-0">
+            {SOCIALS.map((social) => (
+              <Link
+                key={social.name}
+                href={social.href}
+                className={`bg-muted-foreground/5 group inline-flex aspect-square rounded-3xl border transition-all duration-300 hover:border-transparent ${social.class} flex items-center justify-center`}
+              >
+                <social.icon
+                  size={26}
+                  className="text-primary/80 group-hover:text-primary transition-colors"
+                />
+              </Link>
+            ))}
+          </CardContent>
+        </Card>
+
+        {/* Picture card */}
+        <Card className="col-span-3 overflow-x-hidden rounded-3xl bg-transparent py-0">
+          <CardContent className="flex h-full items-center justify-center px-0">
+            <Image
+              src="/images/placeheolder.jpg"
+              alt="Jesus"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
+          </CardContent>
+        </Card>
+
+        {/* About card */}
+        {/* About card */}
+        <Link href="/about" className="col-span-2">
+          <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+            <CardHeader>
+              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
+                ABOUT
+              </h2>
+            </CardHeader>
+            <CardContent className="flex h-full flex-col justify-between">
+              <p className="text-muted-foreground text-2xl font-medium">
+                Passionate musician and developer from Spain.
+              </p>
+              <div className="flex justify-end pb-6">
+                <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
+                  <ArrowUpRight
+                    size={20}
+                    className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+                  />
+                  <ArrowUpRight
+                    size={20}
+                    className="text-muted-foreground absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+                  />
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </Link>
+      </section>
     </main>
     // <main className="min-h-screen bg-[#0A0A0A] px-4 py-8 text-white md:h-screen md:overflow-auto md:p-10">
     //   {/* Bento Grid Layout */}
