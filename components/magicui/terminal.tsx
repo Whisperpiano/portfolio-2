@@ -97,10 +97,28 @@ interface TerminalProps {
 }
 
 export const Terminal = ({ children, className }: TerminalProps) => {
+  const [currentTime, setCurrentTime] = useState<string>('');
+  const [prevTime, setPrevTime] = useState<string>('');
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    // Only initialize and start updating time after component is mounted on the client
+    setIsMounted(true);
+    setCurrentTime(new Date().toLocaleTimeString());
+    setPrevTime(new Date().toLocaleTimeString());
+
+    const timer = setInterval(() => {
+      setPrevTime(currentTime);
+      setCurrentTime(new Date().toLocaleTimeString());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [currentTime]);
+
   return (
     <div
       className={cn(
-        'border-border bg-background z-0 h-full max-h-[400px] w-full max-w-lg rounded-xl border',
+        'border-border bg-muted-foreground/3 z-0 h-full w-full rounded-xl border',
         className,
       )}
     >
@@ -110,11 +128,30 @@ export const Terminal = ({ children, className }: TerminalProps) => {
           <div className="h-2 w-2 rounded-full bg-yellow-500"></div>
           <div className="h-2 w-2 rounded-full bg-green-500"></div>
         </div>
-        <div className="text-muted-foreground/70 font-mono text-xs">
+        <div className="text-muted-foreground font-mono text-xs">
           whisperpiano@portfolio ~ %
         </div>
-        <div className="text-muted-foreground/50 font-mono text-xs">
-          {new Date().toLocaleTimeString()}
+        <div className="text-muted-foreground/75 relative font-mono text-xs">
+          {isMounted
+            ? currentTime.split('').map((char, index) => {
+                const prevChar = prevTime[index];
+                const hasChanged = char !== prevChar;
+
+                return (
+                  <motion.span
+                    key={`${index}-${char}`}
+                    initial={
+                      hasChanged ? { y: -8, opacity: 0 } : { y: 0, opacity: 1 }
+                    }
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ duration: 0.3, type: 'spring' }}
+                    className={cn('inline-block')}
+                  >
+                    {char}
+                  </motion.span>
+                );
+              })
+            : '--:--:--'}
         </div>
       </div>
       <pre className="p-4">

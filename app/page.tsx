@@ -223,77 +223,67 @@ export default function Home() {
           </Card>
 
           {/* Intro card */}
-          <Card className="bg-muted-foreground/3 col-span-3 gap-0 rounded-3xl">
-            <CardHeader>
-              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 font-medium tracking-widest transition-colors">
-                ABOUT
-              </h2>
-            </CardHeader>
-            <CardContent className="gap-4 rounded-3xl">
-              <Terminal>
-                <TypingAnimation>&gt; whoami</TypingAnimation>
-                <AnimatedSpan delay={800} className="text-blue-400">
-                  <span>jesús @ developer-machine</span>
-                </AnimatedSpan>
+          <div className="col-span-3">
+            <Terminal>
+              <TypingAnimation>&gt; whoami</TypingAnimation>
+              <AnimatedSpan delay={1000} className="text-blue-400">
+                <span>jesús @ stavanger-machine ~ 🇳🇴</span>
+              </AnimatedSpan>
 
-                <TypingAnimation delay={1500}>
-                  &gt; cat skills.txt
-                </TypingAnimation>
-                <AnimatedSpan delay={2200} className="text-green-400">
-                  <span>✓ Frontend Development</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={2600} className="text-green-400">
-                  <span>✓ Piano & Music Production</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={3000} className="text-green-400">
-                  <span>✓ Teaching & Mentoring</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={3400} className="text-green-400">
-                  <span>✓ Problem Solving</span>
-                </AnimatedSpan>
+              <TypingAnimation delay={1800}>
+                &gt; cat about_me.txt
+              </TypingAnimation>
+              <AnimatedSpan delay={3200} className="text-yellow-300">
+                <span>
+                  - Frontend dev with a keyboard in one hand and a piano in the
+                  other 🎹💻
+                </span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={4200} className="text-yellow-300">
+                <span>
+                  - Based in Stavanger, where code meets fjords and lo-fi beats
+                </span>
+              </AnimatedSpan>
 
-                <TypingAnimation delay={4200}>
-                  &gt; ls current_projects/
-                </TypingAnimation>
-                <AnimatedSpan delay={4800} className="text-cyan-400">
-                  <span>📱 mobile-app/</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={5100} className="text-cyan-400">
-                  <span>🌐 portfolio-v3/</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={5400} className="text-cyan-400">
-                  <span>🎵 music-visualizer/</span>
-                </AnimatedSpan>
+              <TypingAnimation delay={5300}>
+                &gt; cat skills.txt
+              </TypingAnimation>
+              <AnimatedSpan delay={6500} className="text-green-400">
+                <span>
+                  ✓ Frontend Development (React + TypeScript enthusiast)
+                </span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={7100} className="text-green-400">
+                <span>
+                  ✓ Piano & Music Production (ex-conservatory student 🎼)
+                </span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={7700} className="text-green-400">
+                <span>✓ UI/UX Design with a clean aesthetic obsession</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={8300} className="text-green-400">
+                <span>
+                  ✓ Teaching, mentoring & explaining things with metaphors 😄
+                </span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={8900} className="text-green-400">
+                <span>✓ Solving bugs like it&apos;s jazz improvisation 🎷</span>
+              </AnimatedSpan>
 
-                <TypingAnimation delay={6200}>&gt; git status</TypingAnimation>
-                <AnimatedSpan delay={6800} className="text-yellow-400">
-                  <span>On branch main</span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={7200} className="text-green-400">
-                  <span>
-                    Your branch is up to date with &apos;origin/main&apos;
-                  </span>
-                </AnimatedSpan>
-                <AnimatedSpan delay={7600} className="text-green-400">
-                  <span>Nothing to commit, working tree clean ✨</span>
-                </AnimatedSpan>
-
-                <TypingAnimation delay={8400}>
-                  &gt; echo &quot;Ready for new challenges!&quot;
-                </TypingAnimation>
-                <AnimatedSpan delay={9000} className="text-purple-400">
-                  <span>Ready for new challenges! 🚀</span>
-                </AnimatedSpan>
-              </Terminal>
-              {/* <h1 className="text-primary text-3xl font-medium">
-                Hey there! I&apos;m Jesús
-              </h1>
-              <p className="text-muted-foreground/50 text-xl">
-                A front-end developer, piano teacher and music composer making
-                magic happen in Stavanger, Norway
-              </p> */}
-            </CardContent>
-          </Card>
+              <TypingAnimation delay={9200}>
+                &gt; ./launch_portfolio.sh
+              </TypingAnimation>
+              <AnimatedSpan delay={11200} className="text-pink-400">
+                <span>🚀 Initializing...</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={11700} className="text-pink-400">
+                <span>🌐 Opening in browser...</span>
+              </AnimatedSpan>
+              <AnimatedSpan delay={13200} className="text-pink-400">
+                <span>✅ Ready. Welcome to my portfolio!</span>
+              </AnimatedSpan>
+            </Terminal>
+          </div>
 
           {/* Social card */}
           <Card className="col-span-3 border-0 bg-transparent py-0">
