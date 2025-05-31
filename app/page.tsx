@@ -7,6 +7,11 @@ import { ArrowUpRight } from 'lucide-react';
 import { Marquee } from '@/components/magicui/marquee';
 import { PROJECTS } from '@/lib/data/projects';
 import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button';
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from '@/components/magicui/terminal';
 
 const SOCIALS = [
   {
@@ -218,15 +223,75 @@ export default function Home() {
           </Card>
 
           {/* Intro card */}
-          <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl">
+          <Card className="bg-muted-foreground/3 col-span-3 gap-0 rounded-3xl">
+            <CardHeader>
+              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 font-medium tracking-widest transition-colors">
+                ABOUT
+              </h2>
+            </CardHeader>
             <CardContent className="gap-4 rounded-3xl">
-              <h1 className="text-primary text-3xl font-medium">
+              <Terminal>
+                <TypingAnimation>&gt; whoami</TypingAnimation>
+                <AnimatedSpan delay={800} className="text-blue-400">
+                  <span>jesús @ developer-machine</span>
+                </AnimatedSpan>
+
+                <TypingAnimation delay={1500}>
+                  &gt; cat skills.txt
+                </TypingAnimation>
+                <AnimatedSpan delay={2200} className="text-green-400">
+                  <span>✓ Frontend Development</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={2600} className="text-green-400">
+                  <span>✓ Piano & Music Production</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={3000} className="text-green-400">
+                  <span>✓ Teaching & Mentoring</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={3400} className="text-green-400">
+                  <span>✓ Problem Solving</span>
+                </AnimatedSpan>
+
+                <TypingAnimation delay={4200}>
+                  &gt; ls current_projects/
+                </TypingAnimation>
+                <AnimatedSpan delay={4800} className="text-cyan-400">
+                  <span>📱 mobile-app/</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={5100} className="text-cyan-400">
+                  <span>🌐 portfolio-v3/</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={5400} className="text-cyan-400">
+                  <span>🎵 music-visualizer/</span>
+                </AnimatedSpan>
+
+                <TypingAnimation delay={6200}>&gt; git status</TypingAnimation>
+                <AnimatedSpan delay={6800} className="text-yellow-400">
+                  <span>On branch main</span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={7200} className="text-green-400">
+                  <span>
+                    Your branch is up to date with &apos;origin/main&apos;
+                  </span>
+                </AnimatedSpan>
+                <AnimatedSpan delay={7600} className="text-green-400">
+                  <span>Nothing to commit, working tree clean ✨</span>
+                </AnimatedSpan>
+
+                <TypingAnimation delay={8400}>
+                  &gt; echo &quot;Ready for new challenges!&quot;
+                </TypingAnimation>
+                <AnimatedSpan delay={9000} className="text-purple-400">
+                  <span>Ready for new challenges! 🚀</span>
+                </AnimatedSpan>
+              </Terminal>
+              {/* <h1 className="text-primary text-3xl font-medium">
                 Hey there! I&apos;m Jesús
               </h1>
               <p className="text-muted-foreground/50 text-xl">
                 A front-end developer, piano teacher and music composer making
                 magic happen in Stavanger, Norway
-              </p>
+              </p> */}
             </CardContent>
           </Card>
 
