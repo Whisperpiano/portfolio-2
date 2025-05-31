@@ -448,55 +448,53 @@ export default function Home() {
             </Card>
           </Link> */}
 
-          {/* Connect card */}
+          <section className="col-span-8 flex gap-5">
+            {PROJECTS.map((project) => (
+              <Link
+                key={project.title}
+                href={`/works/${project.slug}`}
+                className="group h-125 flex-1"
+              >
+                <Card className="from-background h-full overflow-hidden bg-gradient-to-t via-transparent to-transparent py-0 transition-colors">
+                  <CardContent className="relative flex h-full flex-col justify-end gap-2 px-6 pt-6">
+                    <div className="absolute inset-0 -z-10">
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                      />
+                    </div>
 
-          <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 col-span-8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+                    <h2 className="mb-7 text-2xl font-bold">{project.title}</h2>
+
+                    <div className="absolute right-6 bottom-6 z-20">
+                      <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
+                        <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
+                        <ArrowUpRight
+                          size={20}
+                          className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+                        />
+                        <ArrowUpRight
+                          size={20}
+                          className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+                        />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </section>
+
+          {/* Connect card */}
+          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 col-span-8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
             <CardHeader>
               <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest uppercase transition-colors">
                 Projects
               </h2>
             </CardHeader>
-            <CardContent className="relative grid h-full grid-cols-3 justify-between gap-6 pb-6">
-              {PROJECTS.map((project) => (
-                <Link
-                  key={project.title}
-                  href={`/works/${project.slug}`}
-                  className="group h-125 flex-1"
-                >
-                  <Card className="from-background h-full overflow-hidden bg-gradient-to-t via-transparent to-transparent py-0 transition-colors">
-                    <CardContent className="relative flex h-full flex-col justify-end gap-2 px-6 pt-6">
-                      <div className="absolute inset-0 -z-10">
-                        <Image
-                          src={project.image}
-                          alt={project.title}
-                          fill
-                          className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
-                        />
-                      </div>
-
-                      <h2 className="mb-7 text-2xl font-bold">
-                        {project.title}
-                      </h2>
-
-                      <div className="absolute right-6 bottom-6 z-20">
-                        <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
-                          <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
-                          <ArrowUpRight
-                            size={20}
-                            className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
-                          />
-                          <ArrowUpRight
-                            size={20}
-                            className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
-                          />
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
-            </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Stack */}
           <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 col-span-8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">

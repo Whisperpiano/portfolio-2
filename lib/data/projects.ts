@@ -2,7 +2,7 @@ export const PROJECTS = [
   {
     title: 'Exam Project 2',
     slug: 'saas-platform',
-    image: '/images/test1.png',
+    image: '/images/shortleap-test.png',
 
     description:
       'A sleek, dark-themed SaaS landing page with glassmorphism effects and advanced UI animations.',
@@ -12,7 +12,7 @@ export const PROJECTS = [
   {
     title: 'Semester Project 2',
     slug: 'ecommerce-dashboard',
-    image: '/images/test2.png',
+    image: '/images/nordheim-test.png',
     description:
       'Comprehensive admin dashboard with real-time analytics, inventory management and order processing.',
     link: 'https://example.com/dashboard',
@@ -21,7 +21,7 @@ export const PROJECTS = [
   {
     title: 'JS Frameworks',
     slug: 'portfolio-website',
-    image: '/images/test3.png',
+    image: '/images/bidly-test.png',
     description:
       'A minimalist, dark-mode portfolio website showcasing creative work with smooth transitions.',
     link: 'https://example.com/portfolio',
