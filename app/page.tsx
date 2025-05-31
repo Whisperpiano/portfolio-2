@@ -1,11 +1,4 @@
-import {
-  FaEnvelope,
-  FaFacebook,
-  FaGithub,
-  FaInstagram,
-  FaLinkedin,
-  FaXTwitter,
-} from 'react-icons/fa6';
+import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6';
 
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
@@ -14,7 +7,6 @@ import { ArrowUpRight } from 'lucide-react';
 import { Marquee } from '@/components/magicui/marquee';
 import { PROJECTS } from '@/lib/data/projects';
 import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button';
-import { AnimatedSpan, TypingAnimation } from '@/components/magicui/terminal';
 
 const SOCIALS = [
   {
@@ -36,24 +28,24 @@ const SOCIALS = [
     icon: FaEnvelope,
   },
 
-  {
-    name: 'Instagram',
-    href: 'https://instagram.com/jesus',
-    class: 'hover:bg-[#E1306C75]',
-    icon: FaInstagram,
-  },
-  {
-    name: 'Facebook',
-    href: 'https://facebook.com/jesus',
-    class: 'hover:bg-[#1877F275]',
-    icon: FaFacebook,
-  },
-  {
-    name: 'Twitter',
-    href: 'https://twitter.com/jesus',
-    class: 'hover:bg-[#1DA1F275]',
-    icon: FaXTwitter,
-  },
+  // {
+  //   name: 'Instagram',
+  //   href: 'https://instagram.com/jesus',
+  //   class: 'hover:bg-[#E1306C75]',
+  //   icon: FaInstagram,
+  // },
+  // {
+  //   name: 'Facebook',
+  //   href: 'https://facebook.com/jesus',
+  //   class: 'hover:bg-[#1877F275]',
+  //   icon: FaFacebook,
+  // },
+  // {
+  //   name: 'Twitter',
+  //   href: 'https://twitter.com/jesus',
+  //   class: 'hover:bg-[#1DA1F275]',
+  //   icon: FaXTwitter,
+  // },
 ];
 
 const STACK = [
@@ -191,31 +183,43 @@ const STACK = [
   },
 ];
 
-const EXPERIENCE = [
-  {
-    name: 'Front-end Developer',
-    company: 'Plantasjen',
-    date: 'Summer 2024',
-    description:
-      "During a two-month summer job, I worked closely with two developers to redesign and launch the company's new website.",
-  },
-  {
-    name: 'Piano teacher',
-    company: 'Sandnes Kulturskole',
-    date: '2021 - Present',
-    description:
-      'Responsible for teaching piano performance, music theory, and harmony to students ranging from young beginners to advanced pianists.',
-  },
-];
+// const EXPERIENCE = [
+//   {
+//     name: 'Front-end Developer',
+//     company: 'Plantasjen',
+//     date: 'Summer 2024',
+//     description:
+//       "During a two-month summer job, I worked closely with two developers to redesign and launch the company's new website.",
+//   },
+//   {
+//     name: 'Piano teacher',
+//     company: 'Sandnes Kulturskole',
+//     date: '2021 - Present',
+//     description:
+//       'Responsible for teaching piano performance, music theory, and harmony to students ranging from young beginners to advanced pianists.',
+//   },
+// ];
 
 export default function Home() {
   return (
     <main className="h-full max-h-dvh min-h-dvh p-4">
-      <section className="grid max-h-dvh grid-cols-3 gap-4">
-        <section className="col-span-2 grid grid-cols-7 gap-4 rounded-3xl border-2 p-4">
+      <section className="">
+        <section className="col-span-2 grid grid-cols-8 gap-4 rounded-3xl border-2 p-4">
+          {/* Picture card */}
+          <Card className="col-span-2 h-full overflow-x-hidden rounded-3xl bg-transparent py-0">
+            <CardContent className="relative flex h-full items-center justify-center px-0">
+              <Image
+                src="/images/profile.png"
+                alt="Jesus"
+                fill
+                className="object-cover"
+              />
+            </CardContent>
+          </Card>
+
           {/* Intro card */}
-          <Card className="bg-muted-foreground/3 col-span-4 rounded-3xl px-6 py-0">
-            <CardContent className="flex h-full flex-col justify-center gap-4 rounded-3xl">
+          <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl">
+            <CardContent className="gap-4 rounded-3xl">
               <h1 className="text-primary text-3xl font-medium">
                 Hey there! I&apos;m Jesús
               </h1>
@@ -242,51 +246,30 @@ export default function Home() {
                   />
                 </Link>
               ))}
-            </CardContent>
-          </Card>
-
-          {/* Picture card */}
-          <Card className="col-span-2 overflow-x-hidden rounded-3xl bg-transparent py-0">
-            <CardContent className="relative flex h-full items-center justify-center px-0">
-              <Image
-                src="/images/profile.png"
-                alt="Jesus"
-                fill
-                className="object-cover"
-              />
-            </CardContent>
-          </Card>
-
-          {/* About card */}
-          <Link href="/about" className="col-span-2">
-            <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
-              <CardHeader>
-                <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
-                  ABOUT
-                </h2>
-              </CardHeader>
-              <CardContent className="flex h-full flex-col justify-between">
-                <p className="text-muted-foreground text-2xl font-medium">
-                  Passionate musician and developer from Spain.
-                </p>
-                <div className="flex justify-end pb-6">
-                  <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
-                    <ArrowUpRight
-                      size={20}
-                      className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
-                    />
-                    <ArrowUpRight
-                      size={20}
-                      className="text-muted-foreground absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
-                    />
+              <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl px-6 py-8">
+                <CardContent className="flex h-full flex-col items-start justify-center gap-6 rounded-3xl">
+                  <div className="space-y-3">
+                    <h2 className="text-primary text-3xl font-medium">
+                      Have a project in mind?
+                    </h2>
+                    <p className="text-muted-foreground/50 text-lg">
+                      Let&apos;s collaborate and bring your ideas to life. From
+                      concept to deployment.
+                    </p>
                   </div>
-                </div>
-              </CardContent>
-            </Card>
-          </Link>
+
+                  <div className="mt-4 ml-auto flex gap-4">
+                    <InteractiveHoverButton>
+                      Get in touch
+                    </InteractiveHoverButton>
+                  </div>
+                </CardContent>
+              </Card>
+            </CardContent>
+          </Card>
 
           {/* Terminal card */}
-          <Card className="bg-muted-foreground/3 col-span-2 rounded-3xl">
+          {/* <Card className="bg-muted-foreground/3 col-span-2 rounded-3xl">
             <CardContent className="h-full">
               <TypingAnimation>&gt; whoami</TypingAnimation>
               <AnimatedSpan delay={800} className="text-blue-400">
@@ -342,10 +325,11 @@ export default function Home() {
                 <span>Ready for new challenges! 🚀</span>
               </AnimatedSpan>
             </CardContent>
-          </Card>
+          </Card> */}
 
           {/* Experience card */}
-          <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-4 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+
+          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-4 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
             <CardHeader>
               <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
                 EXPERIENCE
@@ -355,7 +339,7 @@ export default function Home() {
               <ol className="border-muted-foreground/20 relative mb-6 space-y-10 border-l px-6 pl-6">
                 {EXPERIENCE.map((experience) => (
                   <li key={experience.name} className="group/item mb-4 ml-2">
-                    {/* Timeline dot */}
+                
                     <div className="bg-muted group-hover/item:bg-primary absolute -left-[6.5px] mt-2 h-3 w-3 rounded-full transition-colors"></div>
 
                     <div className="flex items-center justify-between">
@@ -379,29 +363,85 @@ export default function Home() {
                 ))}
               </ol>
             </CardContent>
-          </Card>
+          </Card> */}
+
+          {/* About card */}
+          {/* <Link href="/about" className="col-span-2">
+            <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+              <CardHeader>
+                <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
+                  ABOUT
+                </h2>
+              </CardHeader>
+              <CardContent className="flex h-full flex-col justify-between">
+                <p className="text-muted-foreground text-2xl font-medium">
+                  Passionate musician and developer from Spain.
+                </p>
+                <div className="flex justify-end pb-6">
+                  <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
+                    <ArrowUpRight
+                      size={20}
+                      className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+                    />
+                    <ArrowUpRight
+                      size={20}
+                      className="text-muted-foreground absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+                    />
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </Link> */}
 
           {/* Connect card */}
-          <Card className="bg-muted-foreground/3 col-span-2 rounded-3xl px-6 py-8">
-            <CardContent className="flex h-full flex-col items-start justify-center gap-6 rounded-3xl">
-              <div className="space-y-3">
-                <h2 className="text-primary text-3xl font-medium">
-                  Have a project in mind?
-                </h2>
-                <p className="text-muted-foreground/50 text-lg">
-                  Let&apos;s collaborate and bring your ideas to life. From
-                  concept to deployment.
-                </p>
-              </div>
 
-              <div className="mt-4 ml-auto flex gap-4">
-                <InteractiveHoverButton>Get in touch</InteractiveHoverButton>
-              </div>
-            </CardContent>
-          </Card>
+          <section className="col-span-8 flex gap-4">
+            {PROJECTS.map((project) => (
+              <Link
+                key={project.title}
+                href={`/works/${project.slug}`}
+                className="group h-125 flex-1"
+              >
+                <Card className="hover:border-muted-foreground/50 relative h-full overflow-hidden bg-transparent py-0">
+                  <div className="absolute inset-0 z-10 translate-y-1/4">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      width={800}
+                      height={600}
+                      className="transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+
+                  <CardContent className="flex flex-col gap-2 px-6 pt-6">
+                    <h2 className="mt-1.5 text-2xl font-bold">
+                      {project.title}
+                    </h2>
+                    <p className="text-muted-foreground mt-1.5">
+                      {project.description}
+                    </p>
+
+                    <div className="absolute top-6 right-6 z-20">
+                      <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
+                        <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
+                        <ArrowUpRight
+                          size={20}
+                          className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+                        />
+                        <ArrowUpRight
+                          size={20}
+                          className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+                        />
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </section>
 
           {/* Stack */}
-          <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 col-span-7 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+          <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/5 col-span-8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
             <CardHeader>
               <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest uppercase transition-colors">
                 Tech stack
@@ -432,48 +472,6 @@ export default function Home() {
               </Marquee>
             </CardContent>
           </Card>
-        </section>
-        <section className="flex max-h-screen flex-col gap-4">
-          {PROJECTS.map((project) => (
-            <Link
-              key={project.title}
-              href={`/works/${project.slug}`}
-              className="group flex-1"
-            >
-              <Card className="hover:border-muted-foreground/50 relative h-full overflow-hidden bg-transparent py-0">
-                <div className="absolute inset-0 z-10 translate-y-1/4">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    width={800}
-                    height={600}
-                    className="transition-transform duration-500 group-hover:scale-105"
-                  />
-                </div>
-
-                <CardContent className="flex flex-col gap-2 px-6 pt-6">
-                  <h2 className="mt-1.5 text-2xl font-bold">{project.title}</h2>
-                  <p className="text-muted-foreground mt-1.5">
-                    {project.description}
-                  </p>
-
-                  <div className="absolute top-6 right-6 z-20">
-                    <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
-                      <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
-                      <ArrowUpRight
-                        size={20}
-                        className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
-                      />
-                      <ArrowUpRight
-                        size={20}
-                        className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
-                      />
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </Link>
-          ))}
         </section>
       </section>
     </main>
