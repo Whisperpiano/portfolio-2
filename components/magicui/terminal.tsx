@@ -129,7 +129,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
           <div className="h-2 w-2 rounded-full bg-green-500"></div>
         </div>
         <div className="text-muted-foreground font-mono text-xs">
-          whisperpiano@portfolio ~ %
+          whisperpiano@about ~ %
         </div>
         <div className="text-muted-foreground/75 relative font-mono text-xs">
           {isMounted

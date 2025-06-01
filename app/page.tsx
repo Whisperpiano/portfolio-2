@@ -1,4 +1,11 @@
-import { FaEnvelope, FaGithub, FaLinkedin } from 'react-icons/fa6';
+import {
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaInstagram,
+  FaFacebook,
+  FaXTwitter,
+} from 'react-icons/fa6';
 
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Link from 'next/link';
@@ -6,7 +13,6 @@ import Image from 'next/image';
 import { ArrowUpRight } from 'lucide-react';
 import { Marquee } from '@/components/magicui/marquee';
 import { PROJECTS } from '@/lib/data/projects';
-import { InteractiveHoverButton } from '@/components/magicui/interactive-hover-button';
 import {
   AnimatedSpan,
   Terminal,
@@ -33,24 +39,24 @@ const SOCIALS = [
     icon: FaEnvelope,
   },
 
-  // {
-  //   name: 'Instagram',
-  //   href: 'https://instagram.com/jesus',
-  //   class: 'hover:bg-[#E1306C75]',
-  //   icon: FaInstagram,
-  // },
-  // {
-  //   name: 'Facebook',
-  //   href: 'https://facebook.com/jesus',
-  //   class: 'hover:bg-[#1877F275]',
-  //   icon: FaFacebook,
-  // },
-  // {
-  //   name: 'Twitter',
-  //   href: 'https://twitter.com/jesus',
-  //   class: 'hover:bg-[#1DA1F275]',
-  //   icon: FaXTwitter,
-  // },
+  {
+    name: 'Instagram',
+    href: 'https://instagram.com/jesus',
+    class: 'hover:bg-[#E1306C75]',
+    icon: FaInstagram,
+  },
+  {
+    name: 'Facebook',
+    href: 'https://facebook.com/jesus',
+    class: 'hover:bg-[#1877F275]',
+    icon: FaFacebook,
+  },
+  {
+    name: 'Twitter',
+    href: 'https://twitter.com/jesus',
+    class: 'hover:bg-[#1DA1F275]',
+    icon: FaXTwitter,
+  },
 ];
 
 const STACK = [
@@ -223,7 +229,7 @@ export default function Home() {
           </Card>
 
           {/* Intro card */}
-          <div className="col-span-3">
+          <Link href="/about" className="group relative col-span-3">
             <Terminal>
               <TypingAnimation>&gt; whoami</TypingAnimation>
               <AnimatedSpan delay={1000} className="text-blue-400">
@@ -283,10 +289,96 @@ export default function Home() {
                 <span>✅ Ready. Welcome to my portfolio!</span>
               </AnimatedSpan>
             </Terminal>
+            <div className="absolute right-6 bottom-6 z-20">
+              <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
+                <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
+                <ArrowUpRight
+                  size={20}
+                  className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+                />
+                <ArrowUpRight
+                  size={20}
+                  className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+                />
+              </div>
+            </div>
+          </Link>
+
+          <div className="col-span-3 flex flex-col gap-4">
+            <Card className="col-span-2 border-0 bg-transparent py-0">
+              <CardContent className="grid grid-cols-3 gap-4 rounded-3xl p-0">
+                {SOCIALS.map((social) => (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    className={`group relative inline-flex aspect-square rounded-3xl border transition-all duration-300 hover:border-transparent ${social.class} flex items-center justify-center overflow-hidden`}
+                  >
+                    <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+                    <social.icon
+                      size={50}
+                      className="text-primary/80 relative z-10 transition-all duration-300 group-hover:scale-110 group-hover:text-white"
+                    />
+                    <div className="absolute -right-1 -bottom-1 h-12 w-12 rounded-full bg-white/5 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100"></div>
+                  </Link>
+                ))}
+              </CardContent>
+            </Card>
           </div>
 
+          {/* badge */}
+          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-2 h-full cursor-pointer gap-0 overflow-hidden rounded-3xl px-0 py-0 transition-colors">
+            <CardContent className="relative flex h-full flex-col items-start justify-between p-6">
+              <div className="flex items-center justify-center">
+                <span className="relative -z-[1] inline-flex overflow-hidden rounded-full p-[1px]">
+                  <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#51E4B8_0%,#21554E_50%,#51E4B8_100%)]"></span>
+                  <div className="inline-flex w-full items-center justify-center rounded-3xl bg-neutral-800/15 px-3 py-1 text-xs whitespace-nowrap text-white backdrop-blur-3xl lg:text-sm">
+                    Available for work
+                  </div>
+                </span>
+              </div>
+            </CardContent>
+          </Card> */}
+
+          {/* experience */}
+
+          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-3 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+            <CardHeader>
+              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
+                EXPERIENCE
+              </h2>
+            </CardHeader>
+            <CardContent className="flex h-full flex-col justify-between">
+              <ol className="border-muted-foreground/20 relative mb-6 space-y-10 border-l px-6 pl-6">
+                {EXPERIENCE.map((experience) => (
+                  <li key={experience.name} className="group/item mb-4 ml-2">
+                    <div className="bg-muted group-hover/item:bg-primary absolute -left-[6.5px] mt-2 h-3 w-3 rounded-full transition-colors"></div>
+
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-primary/90 mb-1 text-xl font-medium transition-all duration-300 group-hover/item:translate-x-1">
+                        {experience.name}
+                      </h3>
+                      <time className="text-muted-foreground/50 mb-1 block text-sm font-normal">
+                        {experience.date}
+                      </time>
+                    </div>
+
+                    <p className="text-muted-foreground/70 text-base font-medium">
+                      {experience.company}
+                    </p>
+                    {experience.description && (
+                      <p className="text-muted-foreground/50 mt-2 text-sm font-normal">
+                        {experience.description}
+                      </p>
+                    )}
+                  </li>
+                ))}
+              </ol>
+            </CardContent>
+          </Card> */}
+
           {/* Social card */}
-          <Card className="col-span-3 border-0 bg-transparent py-0">
+          {/* <Card className="col-span-2 border-0 bg-transparent py-0">
             <CardContent className="grid grid-cols-3 gap-4 rounded-3xl p-0">
               {SOCIALS.map((social) => (
                 <Link
@@ -301,27 +393,26 @@ export default function Home() {
                   />
                 </Link>
               ))}
-              <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl px-6 py-8">
-                <CardContent className="flex h-full flex-col items-start justify-center gap-6 rounded-3xl">
-                  <div className="space-y-3">
-                    <h2 className="text-primary text-3xl font-medium">
-                      Have a project in mind?
-                    </h2>
-                    <p className="text-muted-foreground/50 text-lg">
-                      Let&apos;s collaborate and bring your ideas to life. From
-                      concept to deployment.
-                    </p>
-                  </div>
-
-                  <div className="mt-4 ml-auto flex gap-4">
-                    <InteractiveHoverButton>
-                      Get in touch
-                    </InteractiveHoverButton>
-                  </div>
-                </CardContent>
-              </Card>
             </CardContent>
-          </Card>
+          </Card> */}
+
+          {/* <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl px-6 py-8">
+            <CardContent className="flex h-full flex-col items-start justify-center gap-6 rounded-3xl">
+              <div className="space-y-3">
+                <h2 className="text-primary text-3xl font-medium">
+                  Have a project in mind?
+                </h2>
+                <p className="text-muted-foreground/50 text-lg">
+                  Let&apos;s collaborate and bring your ideas to life. From
+                  concept to deployment.
+                </p>
+              </div>
+
+              <div className="mt-4 ml-auto flex gap-4">
+                <InteractiveHoverButton>Get in touch</InteractiveHoverButton>
+              </div>
+            </CardContent>
+          </Card> */}
 
           {/* Terminal card */}
           {/* <Card className="bg-muted-foreground/3 col-span-2 rounded-3xl">
@@ -382,44 +473,6 @@ export default function Home() {
             </CardContent>
           </Card> */}
 
-          {/* Experience card */}
-
-          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-4 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
-            <CardHeader>
-              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
-                EXPERIENCE
-              </h2>
-            </CardHeader>
-            <CardContent className="flex h-full flex-col justify-between">
-              <ol className="border-muted-foreground/20 relative mb-6 space-y-10 border-l px-6 pl-6">
-                {EXPERIENCE.map((experience) => (
-                  <li key={experience.name} className="group/item mb-4 ml-2">
-                
-                    <div className="bg-muted group-hover/item:bg-primary absolute -left-[6.5px] mt-2 h-3 w-3 rounded-full transition-colors"></div>
-
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-primary/90 mb-1 text-xl font-medium transition-all duration-300 group-hover/item:translate-x-1">
-                        {experience.name}
-                      </h3>
-                      <time className="text-muted-foreground/50 mb-1 block text-sm font-normal">
-                        {experience.date}
-                      </time>
-                    </div>
-
-                    <p className="text-muted-foreground/70 text-base font-medium">
-                      {experience.company}
-                    </p>
-                    {experience.description && (
-                      <p className="text-muted-foreground/50 mt-2 text-sm font-normal">
-                        {experience.description}
-                      </p>
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </CardContent>
-          </Card> */}
-
           {/* About card */}
           {/* <Link href="/about" className="col-span-2">
             <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
@@ -455,18 +508,30 @@ export default function Home() {
                 href={`/works/${project.slug}`}
                 className="group h-125 flex-1"
               >
-                <Card className="from-background h-full overflow-hidden bg-gradient-to-t via-transparent to-transparent py-0 transition-colors">
-                  <CardContent className="relative flex h-full flex-col justify-end gap-2 px-6 pt-6">
+                <Card className="from-background hover:border-muted-foreground/50 h-full overflow-hidden bg-gradient-to-t via-transparent to-transparent py-0 transition-colors duration-300">
+                  <CardContent className="relative flex h-full flex-col justify-end gap-0 px-6 pt-6">
                     <div className="absolute inset-0 -z-10">
                       <Image
                         src={project.image}
                         alt={project.title}
                         fill
-                        className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+                        className="object-cover object-center transition-all duration-500 group-hover:scale-105 group-hover:blur-sm"
                       />
                     </div>
 
-                    <h2 className="mb-7 text-2xl font-bold">{project.title}</h2>
+                    <div className="bg-muted-foreground/5 absolute inset-0 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
+
+                    <div className="relative z-20 mb-8 transition-transform duration-300 group-hover:-translate-y-8">
+                      <h2 className="mb-0 text-2xl font-bold">
+                        {project.title}
+                      </h2>
+                    </div>
+
+                    <div className="absolute bottom-9 left-6 z-20 translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+                      <p className="text-muted-foreground/75 line-clamp-3 text-sm">
+                        {project.description}
+                      </p>
+                    </div>
 
                     <div className="absolute right-6 bottom-6 z-20">
                       <div className="group-hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors">
