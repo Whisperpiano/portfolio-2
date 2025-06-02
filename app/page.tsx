@@ -194,23 +194,6 @@ const STACK = [
   },
 ];
 
-// const EXPERIENCE = [
-//   {
-//     name: 'Front-end Developer',
-//     company: 'Plantasjen',
-//     date: 'Summer 2024',
-//     description:
-//       "During a two-month summer job, I worked closely with two developers to redesign and launch the company's new website.",
-//   },
-//   {
-//     name: 'Piano teacher',
-//     company: 'Sandnes Kulturskole',
-//     date: '2021 - Present',
-//     description:
-//       'Responsible for teaching piano performance, music theory, and harmony to students ranging from young beginners to advanced pianists.',
-//   },
-// ];
-
 export default function Home() {
   return (
     <main className="h-full max-h-dvh min-h-dvh p-4">
@@ -337,43 +320,6 @@ export default function Home() {
                   </div>
                 </span>
               </div>
-            </CardContent>
-          </Card> */}
-
-          {/* experience */}
-
-          {/* <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-3 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
-            <CardHeader>
-              <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
-                EXPERIENCE
-              </h2>
-            </CardHeader>
-            <CardContent className="flex h-full flex-col justify-between">
-              <ol className="border-muted-foreground/20 relative mb-6 space-y-10 border-l px-6 pl-6">
-                {EXPERIENCE.map((experience) => (
-                  <li key={experience.name} className="group/item mb-4 ml-2">
-                    <div className="bg-muted group-hover/item:bg-primary absolute -left-[6.5px] mt-2 h-3 w-3 rounded-full transition-colors"></div>
-
-                    <div className="flex items-center justify-between">
-                      <h3 className="text-primary/90 mb-1 text-xl font-medium transition-all duration-300 group-hover/item:translate-x-1">
-                        {experience.name}
-                      </h3>
-                      <time className="text-muted-foreground/50 mb-1 block text-sm font-normal">
-                        {experience.date}
-                      </time>
-                    </div>
-
-                    <p className="text-muted-foreground/70 text-base font-medium">
-                      {experience.company}
-                    </p>
-                    {experience.description && (
-                      <p className="text-muted-foreground/50 mt-2 text-sm font-normal">
-                        {experience.description}
-                      </p>
-                    )}
-                  </li>
-                ))}
-              </ol>
             </CardContent>
           </Card> */}
 
@@ -529,7 +475,7 @@ export default function Home() {
 
                     <div className="absolute bottom-9 left-6 z-20 translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
                       <p className="text-muted-foreground/75 line-clamp-3 text-sm">
-                        {project.description}
+                        {project.name}
                       </p>
                     </div>
 

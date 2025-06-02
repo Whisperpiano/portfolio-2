@@ -1,10 +1,13 @@
 import { PROJECTS } from '@/lib/data/projects';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader } from '@/components/ui/card';
+import { buttonVariants } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
 import Image from 'next/image';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
+import { LinkIcon, X } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import Link from 'next/link';
+import { cn } from '@/lib/utils';
+import { FaGithub } from 'react-icons/fa6';
+import { ShareButton } from '@/components/ui/share-button';
 
 export default async function Work({
   params,
@@ -20,236 +23,157 @@ export default async function Work({
 
   return (
     <main className="h-full max-h-dvh min-h-dvh p-4">
-      <section className="rounded-3xl border-2 p-4">
+      <section className="rounded-3xl border-2">
+        <div className="flex items-center justify-center gap-4 py-20">
+          <Link
+            href="/"
+            className="group hover:border-muted-foreground/50 relative inline-flex aspect-square overflow-hidden rounded-full border p-3 transition-colors"
+          >
+            <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
+            <X
+              size={20}
+              className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
+            />
+            <X
+              size={20}
+              className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
+            />
+          </Link>
+          <ShareButton project={project} />
+        </div>
         <article className="mx-auto max-w-6xl">
-          {/* Back button and project title row */}
-          <div className="mb-8 grid grid-cols-12 gap-4">
-            <Card className="bg-muted-foreground/3 col-span-3 rounded-3xl">
-              <CardContent className="flex h-full items-center p-6">
-                <Link
-                  href="/"
-                  className="group inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-white"
-                >
-                  <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                  Back to Home
-                </Link>
+          {/* <div className="fixed bottom-0 z-10 h-40 w-full mask-t-from-0 backdrop-blur-2xl" /> */}
+
+          <h1 className="text-muted-foreground mt-2 pb-10 text-center text-2xl font-medium tracking-widest uppercase">
+            {project.title}
+          </h1>
+
+          <div className="mb-4 grid grid-cols-12 gap-4">
+            <Card className="bg-muted-foreground/3 group col-span-8 h-full gap-0 rounded-3xl px-0 py-0">
+              <CardContent className="flex flex-col justify-between pb-6">
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Description
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.description}
+                </p>
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Context
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.context}
+                </p>
+                <div className="mt-10 flex gap-4">
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    className={cn(
+                      buttonVariants({ variant: 'default' }),
+                      'rounded-full',
+                    )}
+                  >
+                    <LinkIcon />
+                    Visit Website
+                  </Link>
+                  <Link
+                    href={project.code}
+                    target="_blank"
+                    className={cn(
+                      buttonVariants({ variant: 'outline' }),
+                      'rounded-full',
+                    )}
+                  >
+                    <FaGithub />
+                    View Code
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
-            <Card className="bg-muted-foreground/3 col-span-9 rounded-3xl">
-              <CardContent className="p-6">
-                <h1 className="text-4xl font-bold md:text-5xl">
-                  {project.title}
-                </h1>
-                <p className="mt-2 text-lg text-gray-400">
-                  {project.description}
+            <Card className="bg-muted-foreground/3 group col-span-4 h-full gap-0 rounded-3xl px-0 py-0">
+              <CardContent className="flex flex-col justify-between pb-6">
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Name
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.name}
+                </p>
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Year
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.year}
+                </p>
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Timeline
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.timeline}
+                </p>
+                <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
+                  Stack
+                </span>
+                <p className="text-muted-foreground text-base">
+                  {project.stack.join(', ')}
                 </p>
               </CardContent>
             </Card>
           </div>
 
-          {/* Main content grid */}
-          <div className="grid grid-cols-12 gap-4">
-            {/* Featured Image - Large card */}
-            <Card className="col-span-12 overflow-hidden rounded-3xl bg-transparent">
-              <CardContent className="p-0">
-                <div className="relative aspect-video w-full overflow-hidden">
-                  <Image
-                    src={project.image}
-                    alt={project.title}
-                    fill
-                    priority
-                    className="object-cover"
-                  />
-                </div>
-              </CardContent>
-            </Card>
+          <Card className="col-span-12 overflow-hidden rounded-3xl bg-transparent p-0">
+            <CardContent className="relative aspect-video w-full overflow-hidden p-0">
+              <Image
+                src={project.image}
+                alt={project.title}
+                fill
+                priority
+                className="object-cover"
+              />
+            </CardContent>
+          </Card>
 
-            {/* Project details and action buttons */}
-            <div className="col-span-8 grid grid-cols-8 gap-4">
-              {/* Action Buttons */}
-              <Card className="bg-muted-foreground/3 col-span-8 rounded-3xl">
-                <CardContent className="flex items-center justify-between p-6">
-                  <div className="flex flex-wrap gap-4">
-                    <Link href={project.link} target="_blank">
-                      <Button className="flex items-center gap-2">
-                        Visit Website
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </Link>
-                    <Button variant="outline">Contact Me</Button>
-                  </div>
-
-                  <div>
-                    <span className="text-sm font-medium text-gray-400">
-                      Year
-                    </span>
-                    <p className="text-white">2024</p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Project Overview */}
-              <Card className="bg-muted-foreground/3 col-span-8 rounded-3xl">
-                <CardHeader>
-                  <h2 className="text-muted-foreground/50 pt-6 pb-0 font-medium tracking-widest uppercase">
-                    Project Overview
-                  </h2>
-                </CardHeader>
-                <CardContent className="space-y-4 p-6 text-gray-300">
-                  <p>
-                    {project.title} is a premium template designed with modern
-                    aesthetics and functionality in mind. This project focuses
-                    on delivering a seamless user experience while maintaining
-                    high performance standards.
-                  </p>
-                  <p>
-                    The design emphasizes clean typography, generous spacing,
-                    and thoughtful interactions that guide users through the
-                    interface intuitively. Dark theme implementation enhances
-                    visual hierarchy and reduces eye strain during extended
-                    viewing sessions.
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Gallery images */}
-              <Card className="col-span-4 overflow-hidden rounded-3xl bg-transparent">
-                <CardContent className="p-0">
-                  <div className="relative aspect-video w-full overflow-hidden rounded-xl">
-                    <Image
-                      src="https://images.unsplash.com/photo-1747619701359-13e985bc31e8?q=80&w=1489&auto=format&fit=crop"
-                      alt="Project screenshot"
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="col-span-4 overflow-hidden rounded-3xl bg-transparent">
-                <CardContent className="p-0">
-                  <div className="relative aspect-video w-full overflow-hidden rounded-xl">
-                    <Image
-                      src="https://via.placeholder.com/600x400/1a1a1a/ffffff"
-                      alt="Project screenshot"
-                      fill
-                      className="object-cover transition-transform duration-500 hover:scale-105"
-                    />
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* Right column - Tech stack and highlights */}
-            <div className="col-span-4 grid grid-cols-4 gap-4">
-              {/* Services */}
-              <Card className="bg-muted-foreground/3 col-span-4 rounded-3xl">
-                <CardHeader>
-                  <h2 className="text-muted-foreground/50 pt-6 pb-0 font-medium tracking-widest uppercase">
-                    Services
-                  </h2>
-                </CardHeader>
+          <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {project.features?.map((feature, index) => (
+              <Card
+                key={index}
+                className="bg-muted-foreground/3 group border-muted-foreground/10 hover:border-primary/30 relative overflow-hidden rounded-3xl border py-0 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]"
+              >
                 <CardContent className="p-6">
-                  <p className="text-white">
-                    UI/UX Design, Frontend Development
-                  </p>
-                </CardContent>
-              </Card>
-
-              {/* Tech stack */}
-              <Card className="bg-muted-foreground/3 col-span-4 rounded-3xl">
-                <CardHeader>
-                  <h2 className="text-muted-foreground/50 pt-6 pb-0 font-medium tracking-widest uppercase">
-                    Tech Stack
-                  </h2>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="flex flex-wrap gap-2">
-                    {project.stack.map((tech) => (
-                      <span
-                        key={tech}
-                        className="inline-block rounded-full bg-[#222] px-3 py-1 text-xs font-medium text-gray-300"
-                      >
-                        {tech}
-                      </span>
-                    ))}
+                  <div className="mb-2 flex items-center gap-3">
+                    <h3 className="text-primary text-base font-semibold">
+                      {feature.title}
+                    </h3>
                   </div>
+                  <p className="text-muted-foreground text-sm leading-relaxed">
+                    {feature.text}
+                  </p>
+                  <div className="bg-primary/5 absolute -right-6 -bottom-6 h-24 w-24 rounded-full opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100"></div>
                 </CardContent>
               </Card>
-
-              {/* Project Highlights */}
-              <Card className="bg-muted-foreground/3 col-span-4 rounded-3xl">
-                <CardHeader>
-                  <h2 className="text-muted-foreground/50 pt-6 pb-0 font-medium tracking-widest uppercase">
-                    Project Highlights
-                  </h2>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <ul className="space-y-4 text-gray-300">
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400">
-                        <ArrowRight className="h-3 w-3" />
-                      </span>
-                      <span>
-                        Responsive design that works across all device sizes
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400">
-                        <ArrowRight className="h-3 w-3" />
-                      </span>
-                      <span>
-                        Optimized performance with modern web technologies
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400">
-                        <ArrowRight className="h-3 w-3" />
-                      </span>
-                      <span>
-                        Accessibility features built-in from the ground up
-                      </span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="mt-1 flex h-5 w-5 items-center justify-center rounded-full bg-blue-500/20 text-blue-400">
-                        <ArrowRight className="h-3 w-3" />
-                      </span>
-                      <span>
-                        Elegant animations that enhance the user experience
-                      </span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+            ))}
           </div>
 
-          {/* Navigation footer */}
-          <div className="mt-8 grid grid-cols-12 gap-4">
-            <Card className="bg-muted-foreground/3 col-span-6 rounded-3xl">
-              <CardContent className="p-6">
-                <Link
-                  href="/"
-                  className="group inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-white"
-                >
-                  <ArrowLeft className="h-4 w-4 transition-transform group-hover:-translate-x-1" />
-                  Back to All Projects
-                </Link>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-muted-foreground/3 col-span-6 rounded-3xl">
-              <CardContent className="flex justify-end p-6">
-                <Link
-                  href="/"
-                  className="group inline-flex items-center gap-2 text-sm font-medium text-gray-400 transition-colors hover:text-white"
-                >
-                  Next Project
-                  <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </CardContent>
-            </Card>
+          {/* Project details and action buttons */}
+          <div className="col-span-8 mx-auto mt-4 grid max-w-5xl grid-cols-8 gap-4">
+            {/* Action Buttons */}
+            <div className="col-span-8 overflow-hidden">
+              <div className="p-0">
+                <div className="space-y-6">
+                  {project.documentation.map((doc) => (
+                    <article key={doc.title} className="">
+                      <div className="p-6">
+                        <h3 className="text-primary mb-3 text-lg font-semibold">
+                          {doc.title}
+                        </h3>
+                        <div className="text-muted-foreground prose prose-invert prose-sm max-w-none">
+                          <p className="leading-relaxed">{doc.text}</p>
+                        </div>
+                      </div>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
           </div>
         </article>
       </section>
