@@ -10,6 +10,7 @@ import { FaGithub } from 'react-icons/fa6';
 import { ShareButton } from '@/components/ui/share-button';
 
 import { CodeBlock } from '@/components/shiki/code-block';
+import { BackToTop } from '@/components/back-to-top';
 
 export default async function Work({
   params,
@@ -25,6 +26,7 @@ export default async function Work({
 
   return (
     <main className="h-full max-h-dvh min-h-dvh p-4">
+      <BackToTop />
       <section className="rounded-3xl border-2">
         <div className="flex items-center justify-center gap-4 pt-20 pb-10">
           <Link
