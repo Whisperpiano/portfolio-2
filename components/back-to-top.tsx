@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import { ArrowUp } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { cn } from '@/lib/utils';
 
 export const BackToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -44,7 +45,10 @@ export const BackToTop = () => {
         >
           <button
             onClick={scrollToTop}
-            className="group hover:border-muted-foreground/50 relative inline-flex aspect-square cursor-pointer overflow-hidden rounded-full border p-3 transition-colors"
+            className={cn(
+              'group hover:border-muted-foreground/50 bg-background relative inline-flex aspect-square cursor-pointer overflow-hidden rounded-full border p-3 transition-colors',
+              isVisible ? 'animate-jelly' : '',
+            )}
           >
             <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
             <ArrowUp
