@@ -1,3 +1,7 @@
+import { BIDLY_PROCESS } from './bidly/bidly-process';
+import { NORDHEIM_PROCESS } from './nordheim/nordheim-process';
+import { SHORTLEAP_PROCESS } from './shortleap/shortleap-process';
+
 export const PROJECTS = [
   {
     title: 'Exam Project 2',
@@ -49,20 +53,7 @@ export const PROJECTS = [
         text: 'Per-user link limits and admin-managed global settings stored securely in the database.',
       },
     ],
-    documentation: [
-      {
-        title: 'Overview',
-        text: 'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation.',
-      },
-      {
-        title: 'Features',
-        text: 'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation.',
-      },
-      {
-        title: 'Performance',
-        text: 'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation.',
-      },
-    ],
+    documentation: SHORTLEAP_PROCESS,
   },
   {
     title: 'JS Frameworks',
@@ -114,20 +105,7 @@ export const PROJECTS = [
       },
     ],
 
-    documentation: [
-      {
-        title: 'Overview',
-        text: 'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
-      },
-      {
-        title: 'Features',
-        text: 'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
-      },
-      {
-        title: 'Performance',
-        text: 'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
-      },
-    ],
+    documentation: NORDHEIM_PROCESS,
   },
   {
     title: 'Semester Project 2',
@@ -176,19 +154,6 @@ export const PROJECTS = [
         text: 'Switch between dark and light themes for personalized viewing preferences.',
       },
     ],
-    documentation: [
-      {
-        title: 'Overview',
-        text: 'Bidly is an exclusive auction platform, where users can create, explore, and bid on products or services in a secure and private environment. Designed with a seamless user experience, it features advanced visual effects, robust authentication, and dynamic real-time data handling.',
-      },
-      {
-        title: 'Features',
-        text: 'Bidly is an exclusive auction platform, where users can create, explore, and bid on products or services in a secure and private environment. Designed with a seamless user experience, it features advanced visual effects, robust authentication, and dynamic real-time data handling.',
-      },
-      {
-        title: 'Performance',
-        text: 'Bidly is an exclusive auction platform, where users can create, explore, and bid on products or services in a secure and private environment. Designed with a seamless user experience, it features advanced visual effects, robust authentication, and dynamic real-time data handling.',
-      },
-    ],
+    documentation: BIDLY_PROCESS,
   },
 ];
