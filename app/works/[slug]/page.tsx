@@ -133,65 +133,42 @@ export default async function Work({
             </CardContent>
           </Card>
 
-          <section className="mx-auto max-w-4xl">
-            {/* <div>
-              <h3 className="text-muted-foreground/50 mt-10 text-xl font-medium tracking-widest uppercase">
-                Features
-              </h3>
-              <div className="mt-4 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {project.features?.map((feature, index) => (
-                  <Card
-                    key={index}
-                    className="bg-muted-foreground/3 group border-muted-foreground/10 hover:border-primary/30 relative overflow-hidden rounded-3xl border py-0 transition-all duration-300 hover:shadow-[0_0_20px_rgba(0,0,0,0.2)]"
-                  >
-                    <CardContent className="p-6">
-                      <div className="mb-2 flex items-center gap-3">
-                        <h3 className="text-primary text-base font-semibold">
-                          {feature.title}
-                        </h3>
-                      </div>
-                      <p className="text-muted-foreground text-sm leading-relaxed">
-                        {feature.text}
-                      </p>
-                      <div className="bg-primary/5 absolute -right-6 -bottom-6 h-24 w-24 rounded-full opacity-0 blur-xl transition-opacity duration-300 group-hover:opacity-100"></div>
-                    </CardContent>
-                  </Card>
-                ))}
-              </div>
-            </div> */}
-            <h3 className="text-muted-foreground/50 mt-10 text-xl font-medium tracking-widest uppercase">
+          <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+            <h3 className="text-muted-foreground/50 mt-16 text-xl font-medium tracking-widest uppercase">
               Challenge
             </h3>
-            <p className="text-muted-foreground mt-6 text-base">
+            <p className="prose prose-invert prose-sm text-muted-foreground mt-6 leading-relaxed">
               {project.documentation.challenge}
             </p>
 
-            <h3 className="text-muted-foreground/50 mt-10 text-xl font-medium tracking-widest uppercase">
+            <h3 className="text-muted-foreground/50 mt-16 text-xl font-medium tracking-widest uppercase">
               Process
             </h3>
-            <div className="text-muted-foreground mt-6 text-base">
+            <p className="prose prose-invert prose-sm text-muted-foreground mt-6 leading-relaxed">
               {project.documentation.process.text}
-            </div>
+            </p>
 
-            <div className="mt-8">
-              <h4 className="text-muted-foreground/80 text-base font-medium">
+            <div className="mt-10">
+              <h4 className="text-muted-foreground text-base font-semibold tracking-wide uppercase">
                 {project.documentation.process.list.text}
               </h4>
-              <ul className="mt-6 space-y-8">
+              <ul className="mt-8 space-y-12">
                 {project.documentation.process.list.items.map((item, index) => (
-                  <li key={index} className="border-primary/10 border-l-2 pl-4">
-                    <h4 className="text-primary text-base font-semibold">
+                  <li key={index} className="space-y-4">
+                    <h5 className="text-primary text-lg font-semibold">
                       {item.title}
-                    </h4>
-                    <p className="text-muted-foreground mt-2 text-sm leading-relaxed">
+                    </h5>
+                    <p className="prose prose-invert prose-sm text-muted-foreground leading-relaxed">
                       {item.text}
                     </p>
-                    <div className="mt-3">
-                      {'code' in item && item.code && (
+                    {'code' in item && item.code && (
+                      <div className="mt-4">
                         <CodeBlock lang="tsx">{item.code}</CodeBlock>
-                      )}
-                      {'image' in item && item.image && (
-                        <Card className="col-span-12 overflow-hidden rounded-3xl bg-transparent p-0">
+                      </div>
+                    )}
+                    {'image' in item && item.image && (
+                      <div className="mt-4">
+                        <Card className="overflow-hidden rounded-3xl bg-transparent p-0 shadow-sm">
                           <CardContent className="aspect-video w-full overflow-hidden p-0">
                             <Image
                               src={item.image}
@@ -202,21 +179,80 @@ export default async function Work({
                             />
                           </CardContent>
                         </Card>
-                      )}
-                    </div>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
             </div>
 
-            <h3 className="text-muted-foreground/50 mt-10 text-xl font-medium tracking-widest uppercase">
+            <h3 className="text-muted-foreground/50 mt-20 text-xl font-medium tracking-widest uppercase">
               Solution
             </h3>
-            <p className="text-muted-foreground mt-6 text-base">
+            <p className="prose prose-invert prose-sm text-muted-foreground mt-6 leading-relaxed">
               {project.documentation.solution}
             </p>
           </section>
         </article>
+
+        <section className="border-muted-foreground/10 mx-auto mt-16 max-w-4xl border-t px-4 py-12 sm:px-6 lg:px-8">
+          <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
+            <div className="flex flex-col items-start">
+              <span className="text-muted-foreground/50 text-sm font-medium tracking-widest uppercase">
+                Previous
+              </span>
+              {PROJECTS.findIndex((p) => p.slug === project.slug) > 0 ? (
+                <Link
+                  href={`/works/${PROJECTS[PROJECTS.findIndex((p) => p.slug === project.slug) - 1].slug}`}
+                  className="text-primary hover:text-primary/80 group mt-2 flex items-center gap-2 transition-colors"
+                >
+                  <span className="transition-transform duration-300 group-hover:-translate-x-1">
+                    ←
+                  </span>
+                  <span>
+                    {
+                      PROJECTS[
+                        PROJECTS.findIndex((p) => p.slug === project.slug) - 1
+                      ].title
+                    }
+                  </span>
+                </Link>
+              ) : (
+                <span className="text-muted-foreground/30 mt-2">
+                  No previous project
+                </span>
+              )}
+            </div>
+
+            <div className="flex flex-col items-end">
+              <span className="text-muted-foreground/50 text-sm font-medium tracking-widest uppercase">
+                Next
+              </span>
+              {PROJECTS.findIndex((p) => p.slug === project.slug) <
+              PROJECTS.length - 1 ? (
+                <Link
+                  href={`/works/${PROJECTS[PROJECTS.findIndex((p) => p.slug === project.slug) + 1].slug}`}
+                  className="text-primary hover:text-primary/80 group mt-2 flex items-center gap-2 transition-colors"
+                >
+                  <span>
+                    {
+                      PROJECTS[
+                        PROJECTS.findIndex((p) => p.slug === project.slug) + 1
+                      ].title
+                    }
+                  </span>
+                  <span className="transition-transform duration-300 group-hover:translate-x-1">
+                    →
+                  </span>
+                </Link>
+              ) : (
+                <span className="text-muted-foreground/30 mt-2">
+                  No next project
+                </span>
+              )}
+            </div>
+          </div>
+        </section>
       </section>
     </main>
   );
