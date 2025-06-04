@@ -57,7 +57,8 @@ export default function NotFound() {
               </AnimatedSpan>
               <AnimatedSpan delay={4200} className="text-yellow-300">
                 <span>
-                  No results found. The page you're looking for doesn't exist.
+                  No results found. The page you&apos;re looking for
+                  doesn&apos;t exist.
                 </span>
               </AnimatedSpan>
 
