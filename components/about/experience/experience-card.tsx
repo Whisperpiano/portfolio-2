@@ -4,7 +4,7 @@ import ExperienceItem from './experience-item';
 
 export default function ExperienceCard() {
   return (
-    <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-1 h-full cursor-pointer gap-0 rounded-3xl px-0 py-0 transition-colors">
+    <Card className="bg-muted-foreground/3 group hover:border-muted-foreground/50 hover:bg-muted-foreground/8 col-span-1 h-full cursor-none gap-0 rounded-3xl px-0 py-0 transition-colors">
       <CardHeader>
         <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-3 font-medium tracking-widest transition-colors">
           EXPERIENCE

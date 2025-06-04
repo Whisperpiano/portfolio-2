@@ -14,7 +14,7 @@ export default function About() {
     <main className="h-full max-h-dvh p-4">
       <section className="min-h-dvh rounded-3xl border-2">
         <div className="flex items-center justify-center py-20">
-          <Link href="/">
+          <Link href="/" className="cursor-none">
             <IconButton icon={X} />
           </Link>
         </div>

@@ -7,7 +7,7 @@ export default function SocialLink({ social }: { social: Social }) {
       key={social.name}
       href={social.href}
       target="_blank"
-      className={`group relative inline-flex aspect-square rounded-3xl border transition-all duration-300 hover:border-transparent ${social.class} flex items-center justify-center overflow-hidden`}
+      className={`group relative inline-flex aspect-square cursor-none rounded-3xl border transition-all duration-300 hover:border-transparent ${social.class} flex items-center justify-center overflow-hidden`}
     >
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
       <social.icon

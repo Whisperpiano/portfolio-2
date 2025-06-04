@@ -31,7 +31,7 @@ export default async function Work({
       <BackToTop />
       <section className="rounded-3xl border-2">
         <div className="flex items-center justify-center gap-4 pt-20 pb-10">
-          <Link href="/">
+          <Link href="/" className="cursor-none">
             <IconButton icon={X} />
           </Link>
           <ShareButton project={project} />

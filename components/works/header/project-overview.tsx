@@ -25,7 +25,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
             target="_blank"
             className={cn(
               buttonVariants({ variant: 'default' }),
-              'rounded-full',
+              'cursor-none rounded-full',
             )}
           >
             <LinkIcon />
@@ -36,7 +36,7 @@ export default function ProjectOverview({ project }: { project: Project }) {
             target="_blank"
             className={cn(
               buttonVariants({ variant: 'outline' }),
-              'rounded-full',
+              'cursor-none rounded-full',
             )}
           >
             <FaGithub />

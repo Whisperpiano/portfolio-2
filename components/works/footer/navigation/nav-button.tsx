@@ -25,7 +25,7 @@ export function NavButton({ direction, project }: NavButtonProps) {
       {project ? (
         <Link
           href={`/works/${project.slug}`}
-          className={`text-primary hover:text-primary/80 group mt-2 flex ${flexOrder} items-center gap-2 transition-colors`}
+          className={`text-primary hover:text-primary/80 group mt-2 flex ${flexOrder} cursor-none items-center gap-2 transition-colors`}
         >
           <span>{project.title}</span>
           <span className={arrowClass}>{arrow}</span>
