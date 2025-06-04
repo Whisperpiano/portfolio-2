@@ -9,7 +9,7 @@ export default function ProjectCard({ project }: { project: Project }) {
     <Link
       key={project.title}
       href={`/works/${project.slug}`}
-      className="group flex-1 cursor-none"
+      className="group min-h-[400px] min-w-[280px] flex-1 cursor-none"
     >
       <Card className="from-background hover:border-muted-foreground/50 h-full overflow-hidden bg-gradient-to-t via-transparent to-transparent py-0 transition-colors duration-300">
         <CardContent className="relative flex h-full flex-col justify-end gap-0 px-6 pt-6">
