@@ -3,6 +3,7 @@
 import { Share } from 'lucide-react';
 import { PROJECTS } from '@/lib/data/projects';
 import { toast } from 'sonner';
+import IconButton from '../shared/icon-button';
 
 export const ShareButton = ({
   project,
@@ -35,21 +36,8 @@ export const ShareButton = ({
   };
 
   return (
-    <button
-      onClick={handleShare}
-      className="group hover:border-muted-foreground/50 relative inline-flex aspect-square cursor-pointer overflow-hidden rounded-full border p-3 transition-colors"
-    >
-      <div className="bg-primary/10 absolute inset-0 scale-0 rounded-full transition-transform duration-500 group-hover:scale-100" />
-
-      <Share
-        size={20}
-        className="text-muted-foreground/75 transition-transform duration-200 group-hover:translate-x-20 group-hover:-translate-y-20"
-      />
-
-      <Share
-        size={20}
-        className="text-primary absolute -translate-x-20 translate-y-20 transition-transform duration-200 group-hover:translate-x-0 group-hover:translate-y-0"
-      />
+    <button onClick={handleShare}>
+      <IconButton icon={Share} />
     </button>
   );
 };
