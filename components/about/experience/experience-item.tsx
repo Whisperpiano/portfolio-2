@@ -9,7 +9,7 @@ export default function ExperienceItem({
     <li key={experience.name} className="group/item mb-6 ml-2">
       <div className="bg-muted group-hover/item:bg-primary absolute -left-[6.5px] mt-2 h-3 w-3 rounded-full transition-colors"></div>
 
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-start sm:flex-row sm:items-center sm:justify-between">
         <h3 className="text-muted-foreground group-hover/item:text-primary mb-1 text-base font-medium uppercase transition-all duration-300 group-hover/item:translate-x-1">
           {experience.name}
         </h3>

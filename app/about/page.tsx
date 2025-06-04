@@ -17,15 +17,15 @@ export const metadata: Metadata = {
 
 export default function About() {
   return (
-    <main className="h-full max-h-dvh p-4">
-      <section className="min-h-dvh rounded-3xl border-2">
-        <div className="flex items-center justify-center py-20">
+    <main className="h-full min-h-dvh p-0 sm:p-4">
+      <section className="min-h-[calc(100vh-32px)] rounded-3xl border-0 sm:border-2">
+        <div className="flex items-center justify-center py-8 sm:py-12 lg:py-20">
           <Link href="/" className="cursor-none">
             <IconButton icon={X} />
           </Link>
         </div>
 
-        <section className="mx-auto grid max-w-5xl grid-cols-2 gap-4">
+        <section className="mx-auto grid max-w-5xl grid-cols-1 gap-4 p-4 lg:grid-cols-2">
           {/* About */}
           <AboutCard />
 
