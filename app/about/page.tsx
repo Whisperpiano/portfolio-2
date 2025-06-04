@@ -11,7 +11,7 @@ import QuoteCard from '@/components/about/quote-card';
 import IconButton from '@/components/shared/icon-button';
 
 export const metadata: Metadata = {
-  title: 'About | Portfolio',
+  title: 'About | Whisperpiano',
   description: 'About me',
 };
 

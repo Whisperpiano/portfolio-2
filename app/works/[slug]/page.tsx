@@ -25,15 +25,15 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!project) {
     return {
-      title: 'Proyecto no encontrado | Portfolio',
+      title: '404 | Whisperpiano',
     };
   }
 
   return {
-    title: `${project.title} | Portfolio`,
+    title: `${project.title} | Whisperpiano`,
     description: project.description || 'Project by Whisperpiano',
     openGraph: {
-      title: `${project.title} | Portfolio`,
+      title: `${project.title} | Whisperpiano`,
       description: project.description || 'Project by Whisperpiano',
       images: project.image ? [project.image] : [],
     },

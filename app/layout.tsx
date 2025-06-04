@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Portfolio',
+  title: 'Whisperpiano',
   description: 'Portfolio of Whisperpiano',
 };
 
