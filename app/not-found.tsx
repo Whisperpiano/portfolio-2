@@ -1,13 +1,14 @@
 'use client';
 
-import Link from 'next/link';
 import {
   Terminal,
   TypingAnimation,
   AnimatedSpan,
 } from '@/components/magicui/terminal';
-import { ArrowLeft, Home, FileX2 } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import { motion } from 'motion/react';
+
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
