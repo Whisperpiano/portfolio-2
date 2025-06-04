@@ -12,7 +12,8 @@ export const ShareButton = ({
 }) => {
   const handleShare = async () => {
     if (!navigator.share) {
-      toast('Sharing is not supported in this browser.');
+      navigator.clipboard.writeText(window.location.href);
+      toast('Link copied to clipboard!');
       return;
     }
 
