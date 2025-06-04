@@ -13,7 +13,9 @@ export function NavButton({ direction, project }: NavButtonProps) {
   const arrowClass = isNext
     ? 'transition-transform duration-300 group-hover:translate-x-1'
     : 'transition-transform duration-300 group-hover:-translate-x-1';
-  const alignment = isNext ? 'items-end' : 'items-start';
+  const alignment = isNext
+    ? 'items-center sm:items-end'
+    : 'items-center sm:items-start';
   const flexOrder = isNext ? 'order-normal' : 'flex-row-reverse';
 
   return (
@@ -28,6 +30,7 @@ export function NavButton({ direction, project }: NavButtonProps) {
           className={`text-primary hover:text-primary/80 group mt-2 flex ${flexOrder} cursor-none items-center gap-2 transition-colors`}
         >
           <span>{project.title}</span>
+
           <span className={arrowClass}>{arrow}</span>
         </Link>
       ) : (

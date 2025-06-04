@@ -9,7 +9,7 @@ import Link from 'next/link';
 
 export default function ProjectOverview({ project }: { project: Project }) {
   return (
-    <Card className="bg-muted-foreground/3 group col-span-8 h-full gap-0 rounded-3xl px-0 py-0">
+    <Card className="bg-muted-foreground/3 group col-span-12 h-full gap-0 rounded-3xl px-0 py-0 md:col-span-8">
       <CardContent className="flex flex-col justify-between pb-6">
         <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
           Description

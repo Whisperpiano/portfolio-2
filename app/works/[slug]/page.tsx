@@ -53,10 +53,10 @@ export default async function Work({
   }
 
   return (
-    <main className="h-full max-h-dvh min-h-dvh p-4">
+    <main className="h-full min-h-dvh p-4">
       <BackToTop />
-      <section className="rounded-3xl border-2">
-        <div className="flex items-center justify-center gap-4 pt-20 pb-10">
+      <section className="rounded-3xl border-0 p-4 sm:border-2">
+        <div className="flex items-center justify-center gap-4 py-8 pb-10 sm:py-12 lg:py-20">
           <Link href="/" className="cursor-none">
             <IconButton icon={X} />
           </Link>

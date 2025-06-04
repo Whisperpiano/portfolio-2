@@ -23,7 +23,7 @@ export async function CodeBlock(props: Props) {
       )}
     >
       <div
-        className="overflow-x-auto p-4 text-sm"
+        className="no-scrollbar overflow-x-auto p-4 text-sm"
         dangerouslySetInnerHTML={{ __html: out }}
       />
     </div>
