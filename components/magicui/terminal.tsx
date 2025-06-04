@@ -118,7 +118,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        'border-border bg-muted-foreground/3 z-0 h-full w-full rounded-xl border',
+        'border-border bg-muted-foreground/3 z-0 h-auto w-full overflow-y-auto rounded-xl border',
         className,
       )}
     >
@@ -154,7 +154,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
             : '--:--:--'}
         </div>
       </div>
-      <pre className="p-4">
+      <pre className="min-h-[403px] p-4">
         <code className="grid gap-y-1 overflow-auto">{children}</code>
       </pre>
     </div>

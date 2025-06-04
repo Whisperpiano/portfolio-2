@@ -4,8 +4,8 @@ import { ArrowUpRight } from 'lucide-react';
 
 export default function TerminalCard() {
   return (
-    <Link href="/about" className="group relative col-span-3 cursor-none">
-      <Terminal>
+    <Link href="/about" className="group relative col-span-5 cursor-none">
+      <Terminal className="h-full">
         <TypingAnimation>&gt; whoami</TypingAnimation>
         <AnimatedSpan delay={1000} className="text-blue-400">
           <span>jesús @ stavanger-machine ~ 🇳🇴</span>

@@ -6,24 +6,22 @@ import StackCarousel from '@/components/home/stack/stack-carousel';
 
 export default function Home() {
   return (
-    <main className="h-full max-h-dvh min-h-dvh p-4">
-      <section className="">
-        <section className="col-span-2 grid grid-cols-8 gap-4 rounded-3xl border-2 p-4">
-          {/* Picture card */}
-          <AvatarCard src="/images/profile.png" />
+    <main className="flex min-h-dvh w-full p-4">
+      <section className="grid h-full min-h-[calc(100vh-32px)] w-full grid-cols-12 grid-rows-[1fr_1fr_173px] gap-4 rounded-3xl border-1 p-4">
+        {/* Picture card */}
+        <AvatarCard src="/images/profile.png" />
 
-          {/* Intro card */}
-          <TerminalCard />
+        {/* Intro card */}
+        <TerminalCard />
 
-          {/* Social grid */}
-          <SocialGrid />
+        {/* Social grid */}
+        <SocialGrid />
 
-          {/* Project grid */}
-          <ProjectGrid />
+        {/* Project grid */}
+        <ProjectGrid />
 
-          {/* Stack */}
-          <StackCarousel />
-        </section>
+        {/* Stack */}
+        <StackCarousel />
       </section>
     </main>
   );
