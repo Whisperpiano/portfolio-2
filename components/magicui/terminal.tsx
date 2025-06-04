@@ -118,7 +118,7 @@ export const Terminal = ({ children, className }: TerminalProps) => {
   return (
     <div
       className={cn(
-        'border-border bg-muted-foreground/3 z-0 h-auto w-full overflow-y-auto rounded-xl border',
+        'bg-muted-foreground/3 hover:border-muted-foreground/50 z-0 h-auto w-full overflow-y-auto rounded-xl border transition-colors duration-300',
         className,
       )}
     >
