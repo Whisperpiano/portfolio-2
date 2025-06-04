@@ -1,5 +1,6 @@
 import { X } from 'lucide-react';
 import { GALLERY_IMAGES } from '@/lib/data/gallery';
+import { Metadata } from 'next';
 
 import Link from 'next/link';
 import AboutCard from '@/components/about/about-card';
@@ -8,6 +9,11 @@ import ExperienceCard from '@/components/about/experience/experience-card';
 import InterestGrid from '@/components/about/interests/interest-grid';
 import QuoteCard from '@/components/about/quote-card';
 import IconButton from '@/components/shared/icon-button';
+
+export const metadata: Metadata = {
+  title: 'About | Portfolio',
+  description: 'About me',
+};
 
 export default function About() {
   return (

@@ -1,3 +1,4 @@
+import { Metadata, ResolvingMetadata } from 'next';
 import { PROJECTS } from '@/lib/data/projects';
 import { notFound } from 'next/navigation';
 import { ShareButton } from '@/components/ui/share-button';
@@ -13,6 +14,36 @@ import ChallengeSection from '@/components/works/body/challenge-section';
 import ProcessSection from '@/components/works/body/process-section';
 import SolutionSection from '@/components/works/body/solution-section';
 import ProjectNavigation from '@/components/works/footer/navigation/project-navigation';
+
+interface Props {
+  params: {
+    slug: string;
+  };
+}
+
+export async function generateMetadata(
+  { params }: Props,
+  parent: ResolvingMetadata,
+): Promise<Metadata> {
+  const { slug } = params;
+  const project = PROJECTS.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      title: 'Proyecto no encontrado | Portfolio',
+    };
+  }
+
+  return {
+    title: `${project.title} | Portfolio`,
+    description: project.description || 'Project by Whisperpiano',
+    openGraph: {
+      title: `${project.title} | Portfolio`,
+      description: project.description || 'Project by Whisperpiano',
+      images: project.image ? [project.image] : [],
+    },
+  };
+}
 
 export default async function Work({
   params,
