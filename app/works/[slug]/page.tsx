@@ -53,7 +53,7 @@ export default async function Work({
   }
 
   return (
-    <main className="h-full min-h-dvh p-4">
+    <main className="p-0sm:p-4 h-full min-h-dvh">
       <BackToTop />
       <section className="rounded-3xl border-0 p-4 sm:border-2">
         <div className="flex items-center justify-center gap-4 py-8 pb-10 sm:py-12 lg:py-20">
@@ -63,7 +63,7 @@ export default async function Work({
           <ShareButton project={project} />
         </div>
         <article className="mx-auto max-w-5xl">
-          {/* <div className="fixed bottom-0 z-10 h-40 w-full mask-t-from-0 backdrop-blur-2xl" /> */}
+          {/* <div className="pointer-events-none fixed bottom-0 z-10 h-40 w-full mask-t-from-0 backdrop-blur-2xl" /> */}
           <h1 className="text-muted-foreground mt-2 pb-14 text-center text-2xl font-medium tracking-widest uppercase">
             {project.title}
           </h1>

@@ -17,7 +17,7 @@ export default function ProjectNavigation({
 
   return (
     <section className="border-muted-foreground/10 mx-auto mt-16 max-w-4xl border-t px-4 py-12 sm:px-6 lg:px-8">
-      <div className="flex flex-col items-center justify-between gap-8 sm:flex-row">
+      <div className="flex flex-col items-center justify-between gap-16 sm:flex-row sm:gap-8">
         <NavButton direction="previous" project={prevProject} />
 
         <NavButton direction="next" project={nextProject} />
