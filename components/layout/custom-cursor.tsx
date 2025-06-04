@@ -1,10 +1,16 @@
 'use client';
 
 import { useMousePosition } from '@/lib/hooks/use-mouse-position';
+import { useDetectDevice } from '@/lib/hooks/use-detect-device';
 import { motion } from 'motion/react';
 
 export default function CustomCursor() {
   const position = useMousePosition();
+  const isTouchDevice = useDetectDevice();
+
+  if (isTouchDevice) {
+    return null;
+  }
 
   return (
     <motion.div
