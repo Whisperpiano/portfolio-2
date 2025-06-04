@@ -1,4 +1,4 @@
-import { Metadata, ResolvingMetadata } from 'next';
+import { Metadata } from 'next';
 import { PROJECTS } from '@/lib/data/projects';
 import { notFound } from 'next/navigation';
 import { ShareButton } from '@/components/ui/share-button';
@@ -16,16 +16,11 @@ import SolutionSection from '@/components/works/body/solution-section';
 import ProjectNavigation from '@/components/works/footer/navigation/project-navigation';
 
 interface Props {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
-export async function generateMetadata(
-  { params }: Props,
-  parent: ResolvingMetadata,
-): Promise<Metadata> {
-  const { slug } = params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
   const project = PROJECTS.find((p) => p.slug === slug);
 
   if (!project) {
