@@ -63,7 +63,7 @@ export default async function Work({
           <ShareButton project={project} />
         </div>
         <article className="mx-auto max-w-5xl">
-          {/* <div className="pointer-events-none fixed bottom-0 z-10 h-40 w-full mask-t-from-0 backdrop-blur-2xl" /> */}
+          <div className="to-background pointer-events-none fixed bottom-0 z-10 mx-auto h-20 w-full max-w-5xl bg-gradient-to-b from-transparent" />
           <h1 className="text-muted-foreground mt-2 pb-14 text-center text-2xl font-medium tracking-widest uppercase">
             {project.title}
           </h1>
