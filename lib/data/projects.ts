@@ -157,3 +157,5 @@ export const PROJECTS = [
     documentation: BIDLY_PROCESS,
   },
 ];
+
+export type Project = (typeof PROJECTS)[number];

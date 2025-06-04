@@ -1,0 +1,136 @@
+export const STACK = [
+  {
+    name: 'HTML5',
+    url: '/icons/html5.svg',
+    bgClass: 'bg-[#E34F2615]',
+    hoverBgClass: 'group-hover:bg-[#E34F2630]',
+  },
+  {
+    name: 'CSS3',
+    url: '/icons/css.svg',
+    bgClass: 'bg-[#1572B615]',
+    hoverBgClass: 'group-hover:bg-[#1572B630]',
+  },
+  {
+    name: 'JavaScript',
+    url: '/icons/javascript.svg',
+    bgClass: 'bg-[#F7DF1E15]',
+    hoverBgClass: 'group-hover:bg-[#F7DF1E30]',
+  },
+  {
+    name: 'TypeScript',
+    url: '/icons/typescript.svg',
+    bgClass: 'bg-[#3178C615]',
+    hoverBgClass: 'group-hover:bg-[#3178C630]',
+  },
+  {
+    name: 'React',
+    url: '/icons/react.svg',
+    bgClass: 'bg-[#61DAFB15]',
+    hoverBgClass: 'group-hover:bg-[#61DAFB30]',
+  },
+  {
+    name: 'Next.js',
+    url: '/icons/nextjs.svg',
+    bgClass: 'bg-[#00000015]',
+    hoverBgClass: 'group-hover:bg-[#00000030]',
+  },
+  {
+    name: 'Astro',
+    url: '/icons/astro.svg',
+    bgClass: 'bg-[#FF5D0115]',
+    hoverBgClass: 'group-hover:bg-[#FF5D0130]',
+  },
+  {
+    name: 'Tailwind CSS',
+    url: '/icons/tailwindcss.svg',
+    bgClass: 'bg-[#06B6D415]',
+    hoverBgClass: 'group-hover:bg-[#06B6D430]',
+  },
+  {
+    name: 'React Router',
+    url: '/icons/reactrouter.svg',
+    bgClass: 'bg-[#CA424515]',
+    hoverBgClass: 'group-hover:bg-[#CA424530]',
+  },
+  {
+    name: 'React Query',
+    url: '/icons/reactquery.svg',
+    bgClass: 'bg-[#FF415415]',
+    hoverBgClass: 'group-hover:bg-[#FF415430]',
+  },
+  {
+    name: 'Prisma',
+    url: '/icons/prisma.svg',
+    bgClass: 'bg-[#2D374815]',
+    hoverBgClass: 'group-hover:bg-[#2D374830]',
+  },
+  {
+    name: 'PostgreSQL',
+    url: '/icons/postgresql.svg',
+    bgClass: 'bg-[#4169E115]',
+    hoverBgClass: 'group-hover:bg-[#4169E130]',
+  },
+  {
+    name: 'MySQL',
+    url: '/icons/mysql.svg',
+    bgClass: 'bg-[#4479A115]',
+    hoverBgClass: 'group-hover:bg-[#4479A130]',
+  },
+  {
+    name: 'Turso',
+    url: '/icons/turso.svg',
+    bgClass: 'bg-[#4FF8D215]',
+    hoverBgClass: 'group-hover:bg-[#4FF8D230]',
+  },
+  {
+    name: 'Supabase',
+    url: '/icons/supabase.svg',
+    bgClass: 'bg-[#3ECF8E15]',
+    hoverBgClass: 'group-hover:bg-[#3ECF8E30]',
+  },
+  {
+    name: 'Vercel',
+    url: '/icons/vercel.svg',
+    bgClass: 'bg-[#00000015]',
+    hoverBgClass: 'group-hover:bg-[#00000030]',
+  },
+  {
+    name: 'Netlify',
+    url: '/icons/netlify.svg',
+    bgClass: 'bg-[#00C7B715]',
+    hoverBgClass: 'group-hover:bg-[#00C7B730]',
+  },
+  {
+    name: 'Vite',
+    url: '/icons/vitejs.svg',
+    bgClass: 'bg-[#646CFF15]',
+    hoverBgClass: 'group-hover:bg-[#646CFF30]',
+  },
+  {
+    name: 'PNPM',
+    url: '/icons/pnpm.svg',
+    bgClass: 'bg-[#F6922015]',
+    hoverBgClass: 'group-hover:bg-[#F6922030]',
+  },
+  {
+    name: 'npm',
+    url: '/icons/npm.svg',
+    bgClass: 'bg-[#CB383715]',
+    hoverBgClass: 'group-hover:bg-[#CB383730]',
+  },
+  {
+    name: 'Adobe Photoshop',
+    url: '/icons/photoshop.svg',
+    bgClass: 'bg-[#31A8FF15]',
+    hoverBgClass: 'group-hover:bg-[#31A8FF30]',
+  },
+  {
+    name: 'Figma',
+    url: '/icons/figma.svg',
+    bgClass: 'bg-[#F24E1E15]',
+    hoverBgClass: 'group-hover:bg-[#F24E1E30]',
+  },
+];
+
+export type StackItem = (typeof STACK)[number];
