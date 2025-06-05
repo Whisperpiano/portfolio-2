@@ -20,7 +20,7 @@ export default function About() {
     <main className="h-full min-h-dvh p-0 sm:p-4">
       <section className="min-h-[calc(100vh-32px)] rounded-3xl border-0 sm:border-2">
         <div className="flex items-center justify-center py-8 sm:py-12 lg:py-20">
-          <Link href="/" className="cursor-none">
+          <Link href="/" className="cursor-none" prefetch>
             <IconButton icon={X} />
           </Link>
         </div>
