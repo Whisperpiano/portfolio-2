@@ -1,8 +1,6 @@
 import type { Project } from '@/lib/data/projects';
 import { Card, CardContent } from '../../ui/card';
 import { LinkIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { buttonVariants } from '../../ui/button';
 import { FaGithub } from 'react-icons/fa6';
 
 import Link from 'next/link';
@@ -23,23 +21,17 @@ export default function ProjectOverview({ project }: { project: Project }) {
           <Link
             href={project.link}
             target="_blank"
-            className={cn(
-              buttonVariants({ variant: 'default' }),
-              'cursor-none rounded-full',
-            )}
+            className="group hover:border-foreground hover:bg-foreground/10 flex items-center gap-2 rounded-full border p-2 px-6 transition-all"
           >
-            <LinkIcon />
+            <LinkIcon size={15} />
             Visit Website
           </Link>
           <Link
             href={project.code}
             target="_blank"
-            className={cn(
-              buttonVariants({ variant: 'outline' }),
-              'cursor-none rounded-full',
-            )}
+            className="group hover:border-foreground hover:bg-foreground/10 flex items-center gap-2 rounded-full border p-2 px-6 transition-all"
           >
-            <FaGithub />
+            <FaGithub size={15} />
             View Code
           </Link>
         </div>

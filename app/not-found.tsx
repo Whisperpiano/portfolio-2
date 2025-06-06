@@ -80,7 +80,7 @@ export default function NotFound() {
           >
             <Link
               href="/"
-              className="group hover:border-primary hover:bg-primary/10 flex items-center gap-2 rounded-full border p-3 px-6 transition-all"
+              className="group hover:border-primary hover:bg-primary/10 flex items-center gap-2 rounded-full border p-2 px-6 transition-all"
             >
               <ArrowLeft
                 size={20}
