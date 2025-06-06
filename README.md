@@ -7,7 +7,7 @@
 
 This portfolio isn't just a collection of projects—it's a small digital experience. I've tried to pay attention to detail with a clean dark theme and a few subtle animations that I hope you'll enjoy. It’s a reflection of what I’ve learned so far and the kind of work I enjoy building as a developer.
 
-## Want to Run it Locally?
+## Want to run it locally?
 
 Why not? It's more fun than watching cat videos (well, almost):
 
