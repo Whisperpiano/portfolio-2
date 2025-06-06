@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Whisperpiano Portfolio 🌟
 
-## Getting Started
+![Status](https://img.shields.io/badge/status-awesome-brightgreen)
+![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
 
-First, run the development server:
+## Welcome to my portfolio!
+
+This portfolio isn't just a collection of projects—it's a small digital experience. I've tried to pay attention to detail with a clean dark theme and a few subtle animations that I hope you'll enjoy. It’s a reflection of what I’ve learned so far and the kind of work I enjoy building as a developer.
+
+## Want to Run it Locally?
+
+Why not? It's more fun than watching cat videos (well, almost):
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone this magical repository
+git clone https://github.com/your-username/portfolio-noroff-2.git
+
+# Enter the dimensional portal
+cd portfolio-noroff-2
+
+# Install dependencies (and possibly the entire internet)
+pnpm install
+
+# Start the fusion reactor (development server)
+pnpm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Now open [http://localhost:3000](http://localhost:3000) and behold the wonder.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📝 License
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is under the "Do-Whatever-You-Want-But-Give-Me-Credit" license (also known as MIT).
 
-## Learn More
+## 🙏 Acknowledgments
 
-To learn more about Next.js, take a look at the following resources:
+- Caffeine, for making late-night coding sessions possible
+- My girlfriend, for regularly saving my sanity
+- You, for making it to the end of this README
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+_Built with ❤️, lots of ☕, and occasionally 🍕_
