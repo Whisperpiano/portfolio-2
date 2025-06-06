@@ -1,6 +1,7 @@
 import { X } from 'lucide-react';
 import { GALLERY_IMAGES } from '@/lib/data/gallery';
 import { Metadata } from 'next';
+import { EscapeToHome } from '@/components/escape-to-home';
 
 import Link from 'next/link';
 import AboutCard from '@/components/about/about-card';
@@ -18,6 +19,7 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <main className="h-full min-h-dvh p-0 sm:p-4">
+      <EscapeToHome />
       <section className="min-h-[calc(100vh-32px)] rounded-3xl border-0 sm:border-2">
         <div className="flex items-center justify-center py-8 sm:py-12 lg:py-20">
           <Link href="/" className="cursor-none" prefetch>

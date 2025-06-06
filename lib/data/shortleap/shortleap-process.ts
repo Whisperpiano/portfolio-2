@@ -1,37 +1,72 @@
 export const SHORTLEAP_PROCESS = {
   challenge:
-    'Shortleap was developed as a fullstack application challenge, where the objective was to go beyond the frontend and design a complete solution from database to user interface. Built with Next.js, TypeScript, Drizzle ORM, Turso, and Auth.js, the project combines backend logic, authentication, analytics, and a responsive, user-focused interface. This project reflects my ability to plan, implement, and polish a full product experience — including technical depth, clean design, and attention to performance.',
+    'While Shortleap was initially built to showcase fullstack functionality, its original version lacked visual refinement — no responsive design, no animations, and no theme support. The challenge was to revisit the project not to add features, but to transform the user experience through UI polish and thoughtful enhancements without altering the core logic.',
+
   process: {
-    text: 'Shortleap is a custom URL shortener built entirely from scratch. It includes user authentication, link management, analytics tracking, and UI/UX polish through animations and visual feedback. The backend uses a relational database (Turso) with Drizzle ORM, and the frontend is crafted with React, Tailwind CSS, and Recharts for data visualization. All features are designed to be accessible, responsive, and scalable.',
+    text: 'To elevate the visual and functional quality of Shortleap, I revisited the landing page and dashboard with a strong focus on frontend polish. I implemented a full light/dark theme system, improved layout responsiveness across screen sizes, and incorporated smooth animations using Framer Motion. These changes enhance usability, performance, and overall perception of the product.',
+
     list: {
-      text: 'Key features implemented:',
+      text: 'Key improvements added:',
       items: [
         {
-          title: 'Authentication System',
-          text: 'Secure login and registration flow using Auth.js, supporting both OAuth (GitHub, Google) and credentials. Sessions are managed with JWTs, and protected routes ensure that only authenticated users can access the dashboard. This provides a seamless experience while enforcing security best practices.',
-        },
-        {
-          title: 'Custom Link Management',
-          text: 'Users can create short links with custom slugs, which are validated and stored in a Turso database. The dashboard lists all user-created links with features like search, sorting, and deletion. This empowers users to manage their content intuitively and efficiently.',
-          image: '/projects/shortleap/test.png',
-        },
-        {
-          title: 'Click Analytics',
-          text: 'Each visit to a short link is logged with detailed metadata: timestamp, browser, operating system, country, region, city, and device type. This data is aggregated and displayed with Recharts (bar and pie charts), allowing users to monitor the performance of their links in real time.',
+          title: 'Light and Dark Theme Support',
+          text: "The landing page now adapts to the user's system theme. Images and components dynamically respond to the selected theme using `next-themes`. This allows a visually consistent experience across modes.",
           image: '/projects/shortleap/test2.png',
+          code: `// Get the current theme and function to update it
+const { resolvedTheme } = useTheme();
+
+// Dynamically switch image depending on current theme
+const imageSrc = resolvedTheme === "dark"
+  ? "/images/dashboard_dark_big.webp"
+  : "/images/dashboard_light_big.webp";`,
+        },
+
+        {
+          title: 'Visual Animations with Framer Motion',
+          text: 'Key visual elements now include smooth animations using Framer Motion, giving more life and rhythm to the UI while guiding attention.',
+          code: `// Animated background using Framer Motion
+<motion.div
+  animate={{
+    background: [
+      "radial-gradient(circle, rgba(236, 72, 228, 0.25)...", // Gradient A
+      "radial-gradient(circle, rgba(168, 85, 247, 0.25)..."  // Gradient B
+    ],
+    scale: [1, 1.3, 1.15], // Pulsing scale
+    skewX: [0, 25, -20, 30, -15, 0], // Subtle distortion
+  }}
+  transition={{
+    duration: 12, // Long smooth cycle
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+/>`,
         },
         {
-          title: 'Copy and QR Features',
-          text: 'Users can instantly copy short links to the clipboard or generate a QR code with one click. These actions are enhanced with smooth animations and tooltips, improving usability and supporting mobile and offline use cases.',
-          image: '/projects/shortleap/test3.png',
-        },
-        {
-          title: 'Server Middleware for Click Tracking',
-          text: 'A custom Next.js middleware intercepts requests to short URLs, fetches the corresponding target link from the database, logs the visit with geolocation and user-agent data, and redirects the user. This logic runs server-side for accuracy and performance.',
+          title: 'Responsive Layout and Components',
+          text: "All layouts were refactored using Tailwind's responsive utilities. Grids and spacing scale smoothly from mobile to desktop, ensuring good readability and structure on all screen sizes.",
+          image: '/projects/shortleap/test1.png',
+          code: `// Responsive grid layout using Tailwind breakpoints
+<section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 p-3 sm:p-4 bg-muted-foreground/5">
+  {features.map((feature, index) => (
+    <motion.div
+      key={feature.title}
+      initial={{ opacity: 0, y: 20 }} // Initial hidden state
+      whileInView={{ opacity: 1, y: 0 }} // Fade + slide in when in view
+      transition={{
+        duration: 0.5,
+        ease: [0.33, 1, 0.68, 1],
+        delay: index * 0.1, // Staggered animation per card
+      }}
+      viewport={{ once: true, amount: 0.2 }} // Only animate once when 20% in view
+    >
+    </motion.div>
+  ))}
+</section>`,
         },
       ],
     },
   },
+
   solution:
-    'Shortleap demonstrates my ability to deliver a full product from backend logic to frontend polish. The result is a performant, modern, and user-friendly URL shortener that balances technical architecture with thoughtful UI. This project allowed me to deepen my experience in backend development while applying advanced frontend practices.',
+    'With these visual and interaction improvements, Shortleap now feels more complete — both in terms of functionality and user experience. This update demonstrates my ability to revisit existing codebases and enhance them through UI thinking, design systems, and smooth technical implementation without breaking what already works.',
 };

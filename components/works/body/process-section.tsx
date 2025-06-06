@@ -26,17 +26,19 @@ export default function ProcessSection({ project }: { project: Project }) {
               <p className="prose prose-invert prose-sm text-muted-foreground leading-relaxed">
                 {item.text}
               </p>
-              {'code' in item && item.code && (
+
+              {'code' in item && (
                 <div className="mt-4">
                   <CodeBlock lang="tsx">{item.code}</CodeBlock>
                 </div>
               )}
-              {'image' in item && item.image && (
+
+              {'image' in item && (
                 <div className="mt-4">
                   <Card className="overflow-hidden rounded-3xl bg-transparent p-0 shadow-sm">
                     <CardContent className="aspect-video w-full overflow-hidden p-0">
                       <Image
-                        src={item.image}
+                        src={item.image as string}
                         alt={item.title}
                         width={876}
                         height={493}

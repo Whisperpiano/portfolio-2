@@ -3,6 +3,7 @@ import { PROJECTS } from '@/lib/data/projects';
 import { notFound } from 'next/navigation';
 import { ShareButton } from '@/components/ui/share-button';
 import { BackToTop } from '@/components/back-to-top';
+import { EscapeToHome } from '@/components/escape-to-home';
 import { X } from 'lucide-react';
 
 import Link from 'next/link';
@@ -54,6 +55,7 @@ export default async function Work({
 
   return (
     <main className="h-full min-h-dvh p-0 sm:p-4">
+      <EscapeToHome />
       <BackToTop />
       <section className="rounded-3xl border-0 p-4 sm:border-2">
         <div className="flex items-center justify-center gap-4 py-8 pb-10 sm:py-12 lg:py-20">
