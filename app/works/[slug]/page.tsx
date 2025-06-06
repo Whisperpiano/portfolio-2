@@ -65,7 +65,6 @@ export default async function Work({
           <ShareButton project={project} />
         </div>
         <article className="mx-auto max-w-5xl">
-          <div className="to-background pointer-events-none fixed bottom-0 z-10 mx-auto h-20 w-full max-w-5xl bg-gradient-to-b from-transparent" />
           <h1 className="text-muted-foreground mt-2 pb-14 text-center text-2xl font-medium tracking-widest uppercase">
             {project.title}
           </h1>
@@ -85,6 +84,9 @@ export default async function Work({
             <SolutionSection project={project} />
           </section>
         </article>
+
+        {/* Gradient bottom */}
+        <div className="to-background pointer-events-none fixed right-0 bottom-0 left-0 z-10 h-20 w-full bg-gradient-to-b from-transparent" />
 
         <ProjectNavigation currentSlug={slug} projects={PROJECTS} />
       </section>
