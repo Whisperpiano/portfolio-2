@@ -4,7 +4,7 @@ export default function InterestCard({ item }: { item: InterestItem }) {
   return (
     <div
       key={item.title}
-      className={`group relative h-full cursor-none rounded-3xl border transition-all duration-300 hover:border-transparent ${item.color} flex flex-col items-center justify-center overflow-hidden py-6`}
+      className={`group relative h-full cursor-pointer rounded-3xl border transition-all duration-300 hover:border-transparent ${item.color} flex flex-col items-center justify-center overflow-hidden py-6`}
     >
       <div className="absolute inset-0 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
       <div className="flex flex-col items-center transition-opacity duration-300 group-hover:opacity-0">

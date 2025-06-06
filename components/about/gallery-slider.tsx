@@ -54,13 +54,13 @@ export default function GallerySlider({ images }: CarouselProps) {
         {/* Arrows */}
         <button
           onClick={scrollPrev}
-          className="absolute top-1/2 left-2 z-10 -translate-y-1/2 cursor-none rounded-full bg-black/40 p-2 text-white transition hover:bg-black/70"
+          className="absolute top-1/2 left-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-white transition hover:bg-black/70"
         >
           <ChevronLeft size={20} />
         </button>
         <button
           onClick={scrollNext}
-          className="absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-none rounded-full bg-black/40 p-2 text-white transition hover:bg-black/70"
+          className="absolute top-1/2 right-2 z-10 -translate-y-1/2 cursor-pointer rounded-full bg-black/40 p-2 text-white transition hover:bg-black/70"
         >
           <ChevronRight size={20} />
         </button>
@@ -73,7 +73,7 @@ export default function GallerySlider({ images }: CarouselProps) {
               <button
                 key={index}
                 onClick={() => emblaApi?.scrollTo(index)}
-                className={`h-2 w-2 cursor-none rounded-full transition ${
+                className={`h-2 w-2 cursor-pointer rounded-full transition ${
                   selectedIndex === index
                     ? 'bg-primary'
                     : 'bg-muted-foreground/40 hover:bg-muted-foreground/60'

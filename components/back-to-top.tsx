@@ -46,7 +46,7 @@ export const BackToTop = () => {
           <button
             onClick={scrollToTop}
             className={cn(
-              'group hover:border-muted-foreground/50 bg-background relative inline-flex aspect-square cursor-none overflow-hidden rounded-full border p-3 transition-colors',
+              'group hover:border-muted-foreground/50 bg-background relative inline-flex aspect-square cursor-pointer overflow-hidden rounded-full border p-3 transition-colors',
               isVisible ? 'animate-jelly' : '',
             )}
           >

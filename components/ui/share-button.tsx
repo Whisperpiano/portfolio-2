@@ -37,7 +37,7 @@ export const ShareButton = ({
   };
 
   return (
-    <button onClick={handleShare} className="cursor-none">
+    <button onClick={handleShare} className="cursor-pointer">
       <IconButton icon={Share} />
     </button>
   );

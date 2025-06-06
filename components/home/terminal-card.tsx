@@ -6,7 +6,7 @@ export default function TerminalCard() {
   return (
     <Link
       href="/about"
-      className="group relative col-span-12 col-start-1 row-start-3 cursor-none md:row-start-3 lg:row-start-3 xl:col-span-12 xl:col-start-1 xl:row-start-2 2xl:col-span-5 2xl:col-start-4 2xl:row-start-1"
+      className="group relative col-span-12 col-start-1 row-start-3 cursor-pointer md:row-start-3 lg:row-start-3 xl:col-span-12 xl:col-start-1 xl:row-start-2 2xl:col-span-5 2xl:col-start-4 2xl:row-start-1"
       prefetch
     >
       <Terminal className="h-full">
