@@ -36,15 +36,15 @@ export default function GallerySlider({ images }: CarouselProps) {
             {images.map((src, index) => (
               <div
                 key={index}
-                className="bg-muted-foreground/10 relative h-full min-h-[300px] flex-[0_0_100%]"
+                className="bg-muted-foreground/10 relative aspect-[16/9] min-h-[300px] w-full flex-[0_0_100%]"
               >
                 <Image
                   src={src}
                   alt={`Slide ${index}`}
-                  fill
-                  sizes="(min-width: 567px) 566px, 100vw"
+                  width={1000}
+                  height={800}
                   priority={index === 0}
-                  className="object-cover object-center"
+                  className="h-full w-full object-cover object-center"
                 />
               </div>
             ))}
