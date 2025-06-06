@@ -7,7 +7,7 @@ export const PROJECTS = [
     title: 'Exam Project 2',
     name: 'Shortleap',
     slug: 'exam-project-2',
-    image: '/images/shortleap-test.png',
+    image: '/projects/shortleap/shortleap-thumbnail.webp',
 
     description:
       'Developed as a personal fullstack challenge during the exam period, despite being exempt thanks to my previous work at Plantasjen. I used this opportunity to push my skills further and explore advanced concepts beyond the course requirements.',
@@ -59,7 +59,7 @@ export const PROJECTS = [
     title: 'JS Frameworks',
     name: 'Nordheim',
     slug: 'js-frameworks',
-    image: '/images/nordheim-test.png',
+    image: '/projects/nordheim/nordheim-thumbnail.webp',
     description:
       'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
     context:
@@ -111,7 +111,7 @@ export const PROJECTS = [
     title: 'Semester Project 2',
     name: 'Bidly',
     slug: 'semester-project-2',
-    image: '/images/bidly-test.png',
+    image: '/projects/bidly/bidly-thumbnail.webp',
     description:
       'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
     context:

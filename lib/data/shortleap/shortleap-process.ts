@@ -11,7 +11,7 @@ export const SHORTLEAP_PROCESS = {
         {
           title: 'Light and Dark Theme Support',
           text: "The landing page now adapts to the user's system theme. Images and components dynamically respond to the selected theme using `next-themes`. This allows a visually consistent experience across modes.",
-          image: '/projects/shortleap/test2.png',
+          image: '/projects/shortleap/shortleap-theme.webp',
           code: `// Get the current theme and function to update it
 const { resolvedTheme } = useTheme();
 
@@ -44,7 +44,7 @@ const imageSrc = resolvedTheme === "dark"
         {
           title: 'Responsive Layout and Components',
           text: "All layouts were refactored using Tailwind's responsive utilities. Grids and spacing scale smoothly from mobile to desktop, ensuring good readability and structure on all screen sizes.",
-          image: '/projects/shortleap/test1.png',
+          image: '/projects/shortleap/shortleap-responsive.webp',
           code: `// Responsive grid layout using Tailwind breakpoints
 <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 p-3 sm:p-4 bg-muted-foreground/5">
   {features.map((feature, index) => (
