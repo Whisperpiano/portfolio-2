@@ -1,11 +1,9 @@
-# 🌟 Whisperpiano Portfolio 🌟
+## Welcome to my portfolio!
 
 ![Status](https://img.shields.io/badge/status-awesome-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=flat&logo=typescript&logoColor=white)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
-
-## Welcome to my portfolio!
 
 This portfolio isn't just a collection of projects—it's a small digital experience. I've tried to pay attention to detail with a clean dark theme and a few subtle animations that I hope you'll enjoy. It’s a reflection of what I’ve learned so far and the kind of work I enjoy building as a developer.
 
