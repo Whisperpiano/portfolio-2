@@ -1,4 +1,4 @@
-## Welcome to my portfolio!
+# Welcome to my portfolio!
 
 ![Status](https://img.shields.io/badge/status-awesome-brightgreen)
 ![Next.js](https://img.shields.io/badge/Next.js-black?style=flat&logo=next.js&logoColor=white)
