@@ -4,9 +4,11 @@ import { SHORTLEAP_PROCESS } from './shortleap/shortleap-process';
 
 export const PROJECTS = [
   {
-    title: 'Exam Project 2',
-    name: 'Shortleap',
-    slug: 'exam-project-2',
+    title: 'Shortleap',
+    slug: 'shortleap',
+    year: '2025',
+    subtitle:
+      'Your smart link shortener with real-time stats and QR code generation',
     image: '/projects/shortleap/shortleap-thumbnail.webp',
 
     description:
@@ -14,7 +16,6 @@ export const PROJECTS = [
     context:
       'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation.',
     timeline: '5 weeks',
-    year: '2025',
     link: 'https://shortleap.vercel.app',
     code: 'https://github.com/Whisperpiano/url-shortener',
     stack: [
@@ -56,16 +57,17 @@ export const PROJECTS = [
     documentation: SHORTLEAP_PROCESS,
   },
   {
-    title: 'JS Frameworks',
-    name: 'Nordheim',
-    slug: 'js-frameworks',
+    title: 'Nordheim',
+    slug: 'nordheim',
+    year: '2025',
+    subtitle:
+      'Premium backpacks, designed in Norway with a modern store concept',
     image: '/projects/nordheim/nordheim-thumbnail.webp',
     description:
       'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
     context:
       'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
     timeline: '5 weeks',
-    year: '2025',
     link: 'https://nordheim.netlify.app',
     code: 'https://github.com/Whisperpiano/nordheim',
     stack: [
@@ -108,16 +110,16 @@ export const PROJECTS = [
     documentation: NORDHEIM_PROCESS,
   },
   {
-    title: 'Semester Project 2',
-    name: 'Bidly',
-    slug: 'semester-project-2',
+    title: 'Bidly',
+    slug: 'bidly',
+    year: '2024',
+    subtitle: 'A secure and simple way to auction among peers with a modern UI',
     image: '/projects/bidly/bidly-thumbnail.webp',
     description:
       'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
     context:
       'Bidly is an exclusive auction platform, where users can create, explore, and bid on products or services in a secure and private environment. Designed with a seamless user experience, it features advanced visual effects, robust authentication, and dynamic real-time data handling.',
     timeline: '5 weeks',
-    year: '2024',
     link: 'https://bidlify.netlify.app/home',
     code: 'https://github.com/Whisperpiano/Bidly',
     stack: [
