@@ -4,9 +4,9 @@ import { SHORTLEAP_PROCESS } from './shortleap/shortleap-process';
 
 export const PROJECTS = [
   {
-    title: 'Exam Project 2',
+    title: 'Shortleap',
     name: 'Shortleap',
-    slug: 'exam-project-2',
+    slug: 'shortleap',
     image: '/projects/shortleap/shortleap-thumbnail.webp',
 
     description:
@@ -56,9 +56,9 @@ export const PROJECTS = [
     documentation: SHORTLEAP_PROCESS,
   },
   {
-    title: 'JS Frameworks',
+    title: 'Nordheim',
     name: 'Nordheim',
-    slug: 'js-frameworks',
+    slug: 'nordheim',
     image: '/projects/nordheim/nordheim-thumbnail.webp',
     description:
       'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
@@ -108,9 +108,9 @@ export const PROJECTS = [
     documentation: NORDHEIM_PROCESS,
   },
   {
-    title: 'Semester Project 2',
+    title: 'Bidly',
     name: 'Bidly',
-    slug: 'semester-project-2',
+    slug: 'bidly',
     image: '/projects/bidly/bidly-thumbnail.webp',
     description:
       'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
