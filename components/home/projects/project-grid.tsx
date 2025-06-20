@@ -1,14 +1,7 @@
 import { PROJECTS } from '@/lib/data/projects';
+import { Plus } from 'lucide-react';
 import ProjectCard from './project-card';
-import {
-  ArrowUpRight,
-  Plus,
-  ChevronRight,
-  CircleEllipsis,
-  MoveRight,
-} from 'lucide-react';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 
 export default function ProjectGrid() {
   return (
@@ -22,22 +15,28 @@ export default function ProjectGrid() {
         </div>
       </section>
 
-      <div className="bg-muted-foreground/3 border-muted-foreground/10 hover:border-muted-foreground/50 flex items-center justify-center rounded-3xl border transition-colors duration-300 lg:col-span-1">
+      <div className="bg-muted-foreground/3 hover:bg-primary/5 border-muted-foreground/10 hover:border-muted-foreground/50 relative flex items-center justify-center overflow-hidden rounded-3xl border transition-all duration-500 lg:col-span-1">
         <Link
           href="/works"
-          className="group flex h-full w-full items-center justify-center"
+          className="group flex h-full min-h-[120px] w-full items-center justify-center"
         >
-          <div className="flex h-full w-full flex-col items-center justify-center gap-5">
-            <div className="border-muted-foreground/10 group-hover:border-primary/20 flex size-8 items-center justify-center rounded-full border transition-all duration-300">
+          {/* Capa de overlay que aparece en hover */}
+          <div className="from-primary/20 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-25"></div>
+
+          {/* Contenido central */}
+          <div className="relative z-10 flex flex-col items-center gap-3">
+            <div className="bg-primary/80 group-hover:bg-primary group-hover:shadow-primary/20 flex size-9 items-center justify-center rounded-full border border-transparent transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
               <Plus
-                size={14}
-                className="text-muted-foreground/50 group-hover:text-primary transition-all duration-300 group-hover:rotate-90"
+                size={18}
+                className="text-background transition-transform duration-300 group-hover:rotate-90"
               />
             </div>
-            <div className="text-muted-foreground/30 group-hover:text-primary/50 text-xs tracking-wide uppercase transition-colors duration-300">
+            <span className="text-muted-foreground/80 text-sm font-medium uppercase transition-colors duration-300 group-hover:text-white">
               projects
-            </div>
+            </span>
           </div>
+
+          <div className="bg-primary/10 absolute -right-5 -bottom-5 h-25 w-25 rounded-full opacity-0 blur-md transition-opacity duration-500 group-hover:opacity-60"></div>
         </Link>
       </div>
     </div>
