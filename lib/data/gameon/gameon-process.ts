@@ -8,7 +8,7 @@ export const GAMEON_PROCESS = {
         {
           title: 'Dynamic Product Rendering from API',
           text: 'Game data is fetched from the Noroff API and displayed on the site, including details such as title, image, and description. Each product has a dynamically generated detail page.',
-          image: '/projects/gameon/gameon-ui.webp',
+          image: '/projects/gameon/gameon-ux.webp',
         },
         {
           title: 'Shopping Cart System',

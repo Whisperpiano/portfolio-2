@@ -8,7 +8,7 @@ export const SOUNDWAVES_PROCESS = {
         {
           title: 'Responsive Blog Layout',
           text: 'The blog pages are styled with CSS to adapt across devices, maintaining a clean and modern visual identity. Typography, spacing, and layout decisions were made to enhance readability and focus on content.',
-          image: '/projects/soundwaves/soundwaves-ui.webp',
+          image: '/projects/soundwaves/soundwaves-ux.webp',
         },
         {
           title: 'Dynamic Post Rendering with Vanilla JavaScript',

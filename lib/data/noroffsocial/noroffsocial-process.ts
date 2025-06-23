@@ -8,7 +8,7 @@ export const NOROFF_SOCIAL_PROCESS = {
         {
           title: 'Refined UI and Responsive Design',
           text: 'The interface is built using Tailwind CSS with careful attention to layout, spacing, and responsiveness. The result is a modern, minimal look that adapts well across devices and screen sizes.',
-          image: '/projects/socialmedia/socialmedia-ui.webp',
+          image: '/projects/noroffsocial/noroffsocial-ux.webp',
         },
         {
           title: 'User Authentication and Profile Management',

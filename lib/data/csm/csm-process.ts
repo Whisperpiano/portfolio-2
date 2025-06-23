@@ -8,7 +8,7 @@ export const CSM_PROCESS = {
         {
           title: 'Child-Friendly UI Design',
           text: 'The visual style was crafted to appeal to younger audiences without being condescending. Rounded corners, friendly typography, and vivid accent colors helped create a warm and inviting feel.',
-          image: '/projects/csm/csm-ui.webp',
+          image: '/projects/csm/csm-ux.webp',
         },
         {
           title: 'Responsive Layout with Mobile-First Approach',
