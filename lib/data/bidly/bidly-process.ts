@@ -1,7 +1,5 @@
 export const BIDLY_PROCESS = {
-  challenge:
-    "This project required introducing a meaningful technical improvement to an existing application built with React, TypeScript, Vite, Zustand, and Tailwind CSS. Instead of adding visual changes, I chose to focus on code quality by implementing automated tests — a decision aimed at strengthening the project's robustness and improving my skills as a professional frontend developer.",
-  process: {
+  features: {
     text: 'I integrated Vitest to write unit and component tests, setting up jsdom and Testing Library for a smooth developer experience. The test files are structured to mirror the source code, and key dependencies like Zustand and React Router were mocked to ensure isolation. The test infrastructure included proper configuration in vite.config.ts and custom setup files.',
     list: {
       text: 'Three types of tests were implemented:',
@@ -67,6 +65,4 @@ export const BIDLY_PROCESS = {
       ],
     },
   },
-  solution:
-    'The implementation resulted in a comprehensive test suite covering utility functions, UI components, and complex interaction patterns. Tests are isolated, descriptive, and organized by domain. Dependencies like Zustand and React Router were carefully mocked to simulate different UI states. The testing infrastructure is maintainable, with appropriate configuration and documentation. The end result is a more stable and maintainable codebase, with testing coverage in place for both logic and interface components.',
 };

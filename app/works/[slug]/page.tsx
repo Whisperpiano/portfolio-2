@@ -77,11 +77,11 @@ export default async function Work({
           <ProjectThumbnail project={project} />
 
           <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <ChallengeSection project={project} />
+            {/* <ChallengeSection project={project} /> */}
 
             <ProcessSection project={project} />
 
-            <SolutionSection project={project} />
+            {/* <SolutionSection project={project} /> */}
           </section>
         </article>
 

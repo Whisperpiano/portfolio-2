@@ -1,7 +1,5 @@
 export const NORDHEIM_PROCESS = {
-  challenge:
-    "I was tasked with introducing a meaningful improvement. Rather than adding new visual features, I focused on strengthening the codebase by implementing a comprehensive testing strategy. This decision allowed me to reinforce best practices while improving the project's long-term reliability and maintainability.",
-  process: {
+  features: {
     text: 'The testing strategy covered components, custom hooks, Zustand stores, utility functions, and integration scenarios. I used Vitest along with Testing Library, Happy DOM, and user-event to simulate realistic interactions. A custom render function wrapped components with React Router and TanStack Query providers for more robust and isolated tests.',
     list: {
       text: 'Five types of tests were implemented:',
@@ -73,6 +71,4 @@ export const NORDHEIM_PROCESS = {
       ],
     },
   },
-  solution:
-    'This testing strategy resulted in a robust and maintainable test suite covering core logic, user interface, and cross-component behavior. External dependencies were mocked when needed, and all tests followed the AAA pattern for clarity. The use of Happy DOM allowed fast test runs, and the setup ensured automatic DOM cleanup and global assertions via Jest DOM. The final result is a production-ready test infrastructure aligned with modern frontend standards.',
 };

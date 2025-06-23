@@ -28,7 +28,6 @@ export default function Works() {
     {},
   );
 
-  // Obtener años ordenados (de más reciente a más antiguo)
   const years = Object.keys(projectsByYear).sort((a, b) => b.localeCompare(a));
 
   return (

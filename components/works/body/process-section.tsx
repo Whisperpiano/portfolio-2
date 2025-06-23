@@ -7,22 +7,19 @@ export default function ProcessSection({ project }: { project: Project }) {
   return (
     <>
       <h3 className="text-muted-foreground/50 mt-16 text-xl font-medium tracking-widest uppercase">
-        Process
+        Key Features
       </h3>
       <p className="prose prose-invert prose-sm text-muted-foreground mt-6 leading-relaxed">
-        {project.documentation.process.text}
+        {project.documentation.features.text}
       </p>
 
       <div className="mt-10">
-        <h4 className="text-muted-foreground text-base font-semibold tracking-wide uppercase">
-          {project.documentation.process.list.text}
-        </h4>
         <ul className="mt-8 space-y-12">
-          {project.documentation.process.list.items.map((item, index) => (
+          {project.documentation.features.list.items.map((item, index) => (
             <li key={index} className="space-y-4">
-              <h5 className="text-primary text-lg font-semibold">
+              <h4 className="text-primary text-lg font-semibold">
                 {item.title}
-              </h5>
+              </h4>
               <p className="prose prose-invert prose-sm text-muted-foreground leading-relaxed">
                 {item.text}
               </p>
@@ -42,7 +39,7 @@ export default function ProcessSection({ project }: { project: Project }) {
                         alt={item.title}
                         width={876}
                         height={493}
-                        className="object-cover"
+                        className="object-cover object-center"
                       />
                     </CardContent>
                   </Card>
