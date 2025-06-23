@@ -41,15 +41,11 @@ export default function Works() {
             </Link>
           </div>
 
-          <div className="mb-16 flex flex-col gap-3">
+          <div className="flex flex-col">
             <div className="w-full text-center">
-              <div className="text-muted-foreground/30 pb-2 text-sm tracking-widest uppercase">
-                Archive
-              </div>
-              <h1 className="text-muted-foreground mt-2 pb-6 text-center text-2xl font-medium tracking-widest uppercase">
-                Project Timeline
+              <h1 className="text-muted-foreground mt-2 pb-14 text-center text-2xl font-medium tracking-widest uppercase">
+                Project archive
               </h1>
-              <div className="from-primary/0 via-primary/20 to-primary/0 mt-6 h-px w-full bg-gradient-to-r"></div>
             </div>
           </div>
 
@@ -57,16 +53,14 @@ export default function Works() {
             const projects = projectsByYear[year];
 
             return (
-              <section key={year} className="mb-32">
-                <div className="mb-10">
-                  <div className="flex items-center justify-center gap-4">
-                    <div className="from-background to-muted-foreground/5 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br">
-                      <h2 className="text-2xl font-bold">{year}</h2>
-                    </div>
-                  </div>
+              <section key={year} className="rounded-3xl pb-6">
+                <div className="bg-muted-foreground/3 mb-6 flex justify-center rounded-3xl border">
+                  <h2 className="text-muted-foreground/50 group-hover:text-muted-foreground/75 pt-6 pb-8 text-xl font-medium tracking-widest uppercase transition-colors">
+                    {year}
+                  </h2>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-6">
                   {projects.map((project) => {
                     return (
                       <ProjectCard key={project.title} project={project} />
