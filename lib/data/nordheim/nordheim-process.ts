@@ -1,6 +1,6 @@
 export const NORDHEIM_PROCESS = {
   features: {
-    text: 'The testing strategy covered components, custom hooks, Zustand stores, utility functions, and integration scenarios. I used Vitest along with Testing Library, Happy DOM, and user-event to simulate realistic interactions. A custom render function wrapped components with React Router and TanStack Query providers for more robust and isolated tests.',
+    text: 'Through this project, I have explored best practices in frontend development, designing a scalable data structure, optimizing workflows, and manually optimizing images to improve loading performance. This project challenged me to refine my frontend skills while integrating backend services, authentication, and state management, delivering a polished and functional product.',
     list: {
       text: 'Five types of tests were implemented:',
       items: [

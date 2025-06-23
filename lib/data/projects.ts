@@ -35,9 +35,9 @@ export const PROJECTS = [
     slug: 'nordheim',
     image: '/projects/nordheim/nordheim-thumbnail.webp',
     description:
-      'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
-    context:
       'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
+    context:
+      'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
     timeline: '5 weeks',
     year: '2025',
     link: 'https://nordheim.netlify.app',
