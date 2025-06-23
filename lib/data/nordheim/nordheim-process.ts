@@ -5,68 +5,30 @@ export const NORDHEIM_PROCESS = {
       text: 'Five types of tests were implemented:',
       items: [
         {
-          title: 'Component Tests',
-          text: 'Tested UI elements like buttons and product cards to ensure correct rendering, styling, and event handling.',
-          code: `import { render } from '../test-utils';
-  import Button from '../../components/Button/Button.component';
-  
-  describe('Button Component', () => {
-    it('renders correctly with default props', () => {
-      render(<Button>Click me</Button>);
-      expect(screen.getByRole('button', { name: /click me/i })).toBeInTheDocument();
-    });
-  
-    it('handles click events', async () => {
-      const handleClick = vi.fn();
-      render(<Button onClick={handleClick}>Click me</Button>);
-      await userEvent.click(screen.getByRole('button', { name: /click me/i }));
-      expect(handleClick).toHaveBeenCalledTimes(1);
-    });
-  });`,
+          title: 'Modern UI/UX with Motion and Precision',
+          text: 'The entire interface is crafted using TailwindCSS and Framer Motion, delivering a minimalist aesthetic with subtle transitions and interactive feedback. Design choices prioritize clarity, accessibility, and a refined shopping experience across all devices.',
+          image: '/projects/nordheim/nordheim-ux.webp',
         },
         {
-          title: 'Hook Tests',
-          text: 'Verified custom hooks like useScrollToReviews for expected behavior, including scrolling logic and effect triggers.',
-          code: `describe('useScrollToReviews', () => {
-    it('scrolls to the reviews section', () => {
-      // Setup and assertions for scroll behavior
-    });
-  });`,
+          title: 'Secure and Seamless Authentication',
+          text: 'User accounts are managed through Supabase Auth, enabling secure registration, login, and session handling. Auth-protected routes allow users to view and track their order history in a personalized dashboard.',
         },
         {
-          title: 'Store Tests',
-          text: 'Tested Zustand-based auth store to ensure correct state updates and action dispatching.',
-          code: `describe('authStore', () => {
-    it('sets the user on login', () => {
-      const { getState } = useAuthStore();
-      getState().login(mockUser);
-      expect(getState().user).toEqual(mockUser);
-    });
-  });`,
+          title: 'Order History and Tracking',
+          text: 'Customers can view previous purchases, with structured storage for product details, pricing, and order statuses. This adds transparency and builds trust, mimicking real-world e-commerce standards.',
+          image: '/projects/nordheim/nordheim-orders.webp',
         },
         {
-          title: 'Utility Function Tests',
-          text: 'Ensured pure functions like calculateAverageRating return correct outputs for valid and edge-case inputs.',
-          code: `describe('calculateAverageRating', () => {
-    it('returns 4 for ratings 5 and 3', () => {
-      const reviews = [{ rating: 5 }, { rating: 3 }];
-      expect(calculateAverageRating(reviews)).toBe(4);
-    });
-  
-    it('returns 0 for empty input', () => {
-      expect(calculateAverageRating([])).toBe(0);
-    });
-  });`,
+          title: 'Performance-Driven Data Handling',
+          text: 'React Query is used to cache and synchronize data, enabling fast, low-latency interactions with the backend. This ensures a smooth, app-like experience even under network variability, while minimizing redundant API calls.',
         },
         {
-          title: 'Integration Tests',
-          text: 'Validated interactions between components and their dependencies using renderWithProviders and mocks.',
-          code: `vi.mock('../../components/ImageProduct', () => ({
-    default: () => <div data-testid="image-product">Mock Image</div>,
-  }));
-  
-  render(<ProductCard product={mockProduct} />);
-  expect(screen.getByTestId('image-product')).toBeInTheDocument();`,
+          title: 'Scalable Architecture for Future Growth',
+          text: 'Database schema and frontend state logic are designed with scalability in mind, allowing for future additions like product variants, reviews, or admin management without major refactoring.',
+        },
+        {
+          title: 'Clean Codebase and Developer Experience',
+          text: 'The project follows clear file structure conventions, modular component design, and reusable hooks for forms and data handling. This not only improves maintainability, but also reflects professional frontend engineering practices.',
         },
       ],
     },
