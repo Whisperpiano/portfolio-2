@@ -1,7 +1,8 @@
+// import { CodeBlock } from '@/components/shiki/code-block';
 import type { Project } from '@/lib/data/projects';
 import { Card, CardContent } from '@/components/ui/card';
+
 import Image from 'next/image';
-import { CodeBlock } from '@/components/shiki/code-block';
 
 export default function ProcessSection({ project }: { project: Project }) {
   return (
@@ -24,11 +25,11 @@ export default function ProcessSection({ project }: { project: Project }) {
                 {item.text}
               </p>
 
-              {'code' in item && (
+              {/* {'code' in item && (
                 <div className="mt-4">
                   <CodeBlock lang="tsx">{item.code}</CodeBlock>
                 </div>
-              )}
+              )} */}
 
               {'image' in item && (
                 <div className="mt-4">
