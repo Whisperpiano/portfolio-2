@@ -1,5 +1,6 @@
 import { SOCIALS } from '@/lib/data/socials';
 import { Card, CardContent } from '../../ui/card';
+
 import SocialLink from './social-link';
 
 export default function SocialGrid() {
