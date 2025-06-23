@@ -29,12 +29,9 @@ export default function ProjectCard({
 
           <div className="bg-muted-foreground/5 absolute inset-0 z-10 opacity-0 transition-opacity duration-300 group-hover:opacity-100"></div>
 
-          <div className="relative z-20 mb-8 transition-transform duration-300 group-hover:-translate-y-8">
-            <h2 className="mb-0 text-2xl font-bold">{project.title}</h2>
-          </div>
-
-          <div className="absolute bottom-9 left-6 z-20 translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-muted-foreground/75 me-20 line-clamp-3 text-sm">
+          <div className="relative z-20 mb-8 max-h-[32px] overflow-hidden transition-all duration-500 group-hover:max-h-[100px]">
+            <h2 className="mb-2 text-2xl font-bold">{project.title}</h2>
+            <p className="text-muted-foreground/75 me-20 line-clamp-3 text-sm opacity-0 transition-opacity duration-500 group-hover:opacity-100">
               {project.subtitle}
             </p>
           </div>
