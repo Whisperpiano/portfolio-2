@@ -25,7 +25,7 @@ export default function ProjectGrid() {
           <div className="from-primary/20 absolute inset-0 bg-gradient-to-br to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-25"></div>
 
           {/* main content */}
-          <div className="relative z-10 flex flex-col items-center gap-4">
+          <div className="relative z-10 flex flex-col items-center gap-4 py-12">
             <div className="bg-primary/80 group-hover:bg-primary group-hover:shadow-primary/20 flex size-9 items-center justify-center rounded-full border border-transparent transition-all duration-300 group-hover:scale-110 group-hover:shadow-lg">
               <Plus
                 size={18}
