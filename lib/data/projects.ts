@@ -37,16 +37,15 @@ export const PROJECTS = [
     title: 'Shortleap',
     name: 'Shortleap',
     slug: 'shortleap',
-    image: '/projects/shortleap/shortleap-thumbnail.webp',
+    year: '2025',
     subtitle:
       'Your smart link shortener with real-time stats and QR code generation',
-
+    image: '/projects/shortleap/shortleap-thumbnail.webp',
     description:
       'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation. ',
     context:
       'Developed as a personal fullstack challenge during the exam period, despite being exempt thanks to my previous work at Plantasjen. I used this opportunity to push my skills further and explore advanced concepts beyond the course requirements.',
     timeline: '5 weeks',
-    year: '2025',
     link: 'https://shortleap.vercel.app',
     code: 'https://github.com/Whisperpiano/url-shortener',
     stack: [
@@ -65,6 +64,7 @@ export const PROJECTS = [
     title: 'Nordheim',
     name: 'Nordheim',
     slug: 'nordheim',
+    year: '2025',
     image: '/projects/nordheim/nordheim-thumbnail.webp',
     subtitle:
       'Premium backpacks, designed in Norway with a modern store concept',
@@ -73,7 +73,6 @@ export const PROJECTS = [
     context:
       'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
     timeline: '5 weeks',
-    year: '2025',
     link: 'https://nordheim.netlify.app',
     code: 'https://github.com/Whisperpiano/nordheim',
     stack: [
@@ -91,7 +90,7 @@ export const PROJECTS = [
   {
     title: 'Bidly',
     name: 'Bidly',
-    slug: 'bidly',
+    year: '2024',
     image: '/projects/bidly/bidly-thumbnail.webp',
     subtitle: 'A secure and simple way to auction among peers with a modern UI',
     description:
@@ -99,7 +98,6 @@ export const PROJECTS = [
     context:
       'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
     timeline: '5 weeks',
-    year: '2024',
     link: 'https://bidlify.netlify.app/home',
     code: 'https://github.com/Whisperpiano/Bidly',
     stack: [

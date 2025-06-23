@@ -12,11 +12,11 @@ export default function ProjectOverview({ project }: { project: Project }) {
         <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
           Description
         </span>
-        <p className="text-muted-foreground text-base">{project.description}</p>
+        <p className="text-muted-foreground text-base">{project.context}</p>
         <span className="text-muted-foreground/50 pt-6 pb-3 text-sm font-medium tracking-widest uppercase">
           Context
         </span>
-        <p className="text-muted-foreground text-base">{project.context}</p>
+        <p className="text-muted-foreground text-base">{project.description}</p>
         <div className="mt-10 flex gap-4">
           <Link
             href={project.link}
