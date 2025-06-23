@@ -22,18 +22,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
   if (!project) {
     return {
-      title: '404 | Whisperpiano',
+      title: 'Whisperpiano | 404',
     };
   }
 
   return {
-    title: `${project.title} | Whisperpiano`,
+    title: `Whisperpiano | ${project.title}`,
     description: project.description || 'Project by Whisperpiano',
-    openGraph: {
-      title: `${project.title} | Whisperpiano`,
-      description: project.description || 'Project by Whisperpiano',
-      images: project.image ? [project.image] : [],
-    },
   };
 }
 

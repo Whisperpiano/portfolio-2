@@ -8,7 +8,7 @@ import ProjectCard from '@/components/home/projects/project-card';
 import IconButton from '@/components/shared/icon-button';
 
 export const metadata = {
-  title: 'Works | Portfolio',
+  title: 'Whisperpiano | Archive',
   description: 'Explore my portfolio projects organized by year',
 };
 

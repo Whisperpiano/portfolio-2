@@ -10,7 +10,7 @@ import QuoteCard from '@/components/about/quote-card';
 import GoBackButton from '@/components/go-back-button';
 
 export const metadata: Metadata = {
-  title: 'About | Whisperpiano',
+  title: 'Whisperpiano | About',
   description: 'About me',
 };
 
