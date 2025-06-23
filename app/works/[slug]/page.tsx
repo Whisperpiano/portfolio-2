@@ -4,17 +4,13 @@ import { notFound } from 'next/navigation';
 import { ShareButton } from '@/components/ui/share-button';
 import { BackToTop } from '@/components/back-to-top';
 import { EscapeToHome } from '@/components/escape-to-home';
-import { X } from 'lucide-react';
 
-import Link from 'next/link';
-import IconButton from '@/components/shared/icon-button';
 import ProjectThumbnail from '@/components/works/header/project-thumbnail';
 import ProjectDetails from '@/components/works/header/project-details';
 import ProjectOverview from '@/components/works/header/project-overview';
-import ChallengeSection from '@/components/works/body/challenge-section';
 import ProcessSection from '@/components/works/body/process-section';
-import SolutionSection from '@/components/works/body/solution-section';
 import ProjectNavigation from '@/components/works/footer/navigation/project-navigation';
+import GoBackButton from '@/components/go-back-button';
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -59,9 +55,7 @@ export default async function Work({
       <BackToTop />
       <section className="rounded-3xl border-0 p-4 sm:border-2">
         <div className="flex items-center justify-center gap-4 py-8 pb-10 sm:py-12 lg:py-20">
-          <Link href="/" className="cursor-pointer" prefetch>
-            <IconButton icon={X} />
-          </Link>
+          <GoBackButton />
           <ShareButton project={project} />
         </div>
         <article className="mx-auto max-w-5xl">
@@ -77,11 +71,11 @@ export default async function Work({
           <ProjectThumbnail project={project} />
 
           <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
-            <ChallengeSection project={project} />
+            {/* <ChallengeSection project={project} /> */}
 
             <ProcessSection project={project} />
 
-            <SolutionSection project={project} />
+            {/* <SolutionSection project={project} /> */}
           </section>
         </article>
 

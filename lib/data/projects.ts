@@ -1,20 +1,50 @@
 import { BIDLY_PROCESS } from './bidly/bidly-process';
+import { CSM_PROCESS } from './csm/csm-process';
+import { GAMEON_PROCESS } from './gameon/gameon-process';
 import { NORDHEIM_PROCESS } from './nordheim/nordheim-process';
+import { NOROFF_SOCIAL_PROCESS } from './noroffsocial/noroffsocial-process';
 import { SHORTLEAP_PROCESS } from './shortleap/shortleap-process';
+import { SOUNDWAVES_PROCESS } from './soundwaves/soundwaves-process';
+
+export const FEATURED_PROJECTS = [
+  {
+    title: 'Shortleap',
+    name: 'Shortleap',
+    slug: 'shortleap',
+    image: '/projects/shortleap/shortleap-thumbnail.webp',
+    subtitle:
+      'Your smart link shortener with real-time stats and QR code generation',
+  },
+  {
+    title: 'Nordheim',
+    name: 'Nordheim',
+    slug: 'nordheim',
+    image: '/projects/nordheim/nordheim-thumbnail.webp',
+    subtitle:
+      'Premium backpacks, designed in Norway with a modern store concept',
+  },
+  {
+    title: 'Bidly',
+    name: 'Bidly',
+    slug: 'bidly',
+    image: '/projects/bidly/bidly-thumbnail.webp',
+    subtitle: 'A secure and simple way to auction among peers with a modern UI',
+  },
+];
 
 export const PROJECTS = [
   {
     title: 'Shortleap',
+    name: 'Shortleap',
     slug: 'shortleap',
     year: '2025',
     subtitle:
       'Your smart link shortener with real-time stats and QR code generation',
     image: '/projects/shortleap/shortleap-thumbnail.webp',
-
     description:
-      'Developed as a personal fullstack challenge during the exam period, despite being exempt thanks to my previous work at Plantasjen. I used this opportunity to push my skills further and explore advanced concepts beyond the course requirements.',
+      'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation. ',
     context:
-      'Shortleap is an open-source URL shortener built with Next.js and TypeScript, featuring a modern, dark-themed UI and advanced performance optimizations. It includes features like custom URL shortening, analytics, and quick QR code generation.',
+      'Developed as a personal fullstack challenge during the exam period, despite being exempt thanks to my previous work at Plantasjen. I used this opportunity to push my skills further and explore advanced concepts beyond the course requirements.',
     timeline: '5 weeks',
     link: 'https://shortleap.vercel.app',
     code: 'https://github.com/Whisperpiano/url-shortener',
@@ -28,45 +58,20 @@ export const PROJECTS = [
       'Framer Motion',
       'Zod',
     ],
-    features: [
-      {
-        title: 'Custom URL Shortening',
-        text: 'Users can generate personalized short links with optional slugs for easy sharing and recognition.',
-      },
-      {
-        title: 'Real-Time Click Analytics',
-        text: 'Track clicks per link, including location, device, browser, and operating system data.',
-      },
-      {
-        title: 'QR Code Generation',
-        text: 'Instant QR codes are created for every shortened URL to enable quick access on any device.',
-      },
-      {
-        title: 'User Authentication and Rate Limiting',
-        text: 'Protected routes and limits per user ensure secure and controlled usage, powered by Auth.js.',
-      },
-      {
-        title: 'Modern Fullstack Stack',
-        text: 'Built with Next.js, Drizzle ORM, Turso, and Tailwind for a fast, scalable, and elegant experience.',
-      },
-      {
-        title: 'Admin Settings and Link Limits',
-        text: 'Per-user link limits and admin-managed global settings stored securely in the database.',
-      },
-    ],
     documentation: SHORTLEAP_PROCESS,
   },
   {
     title: 'Nordheim',
+    name: 'Nordheim',
     slug: 'nordheim',
     year: '2025',
+    image: '/projects/nordheim/nordheim-thumbnail.webp',
     subtitle:
       'Premium backpacks, designed in Norway with a modern store concept',
-    image: '/projects/nordheim/nordheim-thumbnail.webp',
     description:
-      'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
-    context:
       'Nordheim is a premium backpack brand that blends Scandinavian minimalism with functionality, offering high-quality backpacks for both urban and outdoor lifestyles. This project was built as a full-stack e-commerce platform, focusing on performance, usability, and a seamless shopping experience.',
+    context:
+      'This project was developed during the JS Frameworks module at Noroff to practice building modern web apps with React. The project focused on routing, state management, and clean component structure within a responsive store concept.',
     timeline: '5 weeks',
     link: 'https://nordheim.netlify.app',
     code: 'https://github.com/Whisperpiano/nordheim',
@@ -80,45 +85,18 @@ export const PROJECTS = [
       'Framer Motion',
       'Zod',
     ],
-    features: [
-      {
-        title: 'Scalable Data Structure',
-        text: 'Designed to support future growth while maintaining performance and flexibility.',
-      },
-      {
-        title: 'Secure Authentication',
-        text: 'User registration and login powered by Supabase Auth.',
-      },
-      {
-        title: 'Modern UI/UX ',
-        text: 'Built with TailwindCSS and Framer Motion for a clean design and smooth animations.',
-      },
-      {
-        title: 'Optimized Workflows',
-        text: 'Efficient API calls and state management to enhance responsiveness and user experience.',
-      },
-      {
-        title: 'Order Management System',
-        text: 'Users can place orders, with structured storage for tracking purchases.',
-      },
-      {
-        title: 'Performance-Driven Development',
-        text: 'Focused on maintaining fast load times and optimized resource usage.',
-      },
-    ],
-
     documentation: NORDHEIM_PROCESS,
   },
   {
     title: 'Bidly',
-    slug: 'bidly',
+    name: 'Bidly',
     year: '2024',
-    subtitle: 'A secure and simple way to auction among peers with a modern UI',
     image: '/projects/bidly/bidly-thumbnail.webp',
+    subtitle: 'A secure and simple way to auction among peers with a modern UI',
     description:
-      'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
-    context:
       'Bidly is an exclusive auction platform, where users can create, explore, and bid on products or services in a secure and private environment. Designed with a seamless user experience, it features advanced visual effects, robust authentication, and dynamic real-time data handling.',
+    context:
+      'Bidly was developed as part of Semester Project 2 during my second year at Noroff. It’s a full-featured auction platform with user authentication, listing management, and a strong focus on clean UI, accessibility, and structured data handling.',
     timeline: '5 weeks',
     link: 'https://bidlify.netlify.app/home',
     code: 'https://github.com/Whisperpiano/Bidly',
@@ -130,34 +108,87 @@ export const PROJECTS = [
       'React Router',
       'Tailwind CSS',
     ],
-    features: [
-      {
-        title: 'User Registration and Authentication',
-        text: 'Implemented using React Hook Form for a seamless and secure experience.',
-      },
-      {
-        title: 'Dynamic Descriptions with Gemini API',
-        text: 'Generate item descriptions quickly and efficiently using the Gemini API.',
-      },
-      {
-        title: 'Image Uploading with Imgur API',
-        text: 'Users can upload images for their auction listings, update their avatars, and customize their profile banners.',
-      },
-      {
-        title: 'Global State Management',
-        text: 'State management powered by Zustand for a smooth and efficient user experience.',
-      },
-      {
-        title: 'Auction Listings',
-        text: 'Users can create, view, and place bids on auction listings effortlessly.',
-      },
-      {
-        title: 'Dark and Light Theme',
-        text: 'Switch between dark and light themes for personalized viewing preferences.',
-      },
-    ],
     documentation: BIDLY_PROCESS,
+  },
+  {
+    title: 'Social Media Noroff',
+    name: 'Social Media Noroff',
+    slug: 'social-media-noroff',
+    image: '/projects/noroffsocial/noroffsocial-thumbnail.webp',
+    subtitle:
+      'Social media platform where users can post content, follow other users, and personalize their profiles',
+    description:
+      'A lightweight yet functional social media platform where users can post content, follow other users, and personalize their profiles. Built with React and TypeScript, it features responsive design, image uploads via Imgur API, and a clean, maintainable codebase.',
+    context:
+      'This project was originally a Noroff assignment, intended to use plain JavaScript and the Noroff API. I extended the original scope by rebuilding it in React and TypeScript to improve performance, maintainability, and developer experience. The result is a fully functional social app that reflects modern frontend practices.',
+    timeline: '5 weeks',
+    year: '2024',
+    link: 'https://noroff-social.netlify.app/home',
+    code: 'https://github.com/Whisperpiano/Social-Media-Noroff',
+    stack: [
+      'React',
+      'TypeScript',
+      'React Router',
+      'Tailwind CSS',
+      'Imgur API',
+      'Gemini AI',
+    ],
+    documentation: NOROFF_SOCIAL_PROCESS,
+  },
+  {
+    title: 'SoundWaves',
+    name: 'SoundWaves',
+    slug: 'soundwaves',
+    image: '/projects/soundwaves/soundwaves-thumbnail.webp',
+    subtitle:
+      'A blog platform focused on emerging music, trivia, and artist discovery',
+    description:
+      'SoundWaves is a blog platform focused on emerging music, trivia, and artist discovery. Built with vanilla JavaScript, it features dynamic content rendering, admin tools, and a clean, responsive design crafted without any frameworks.',
+    context:
+      'This was the final project of my first year at Noroff, designed to demonstrate everything I had learned about front-end development using only HTML, CSS, and JavaScript. The challenge was to build a fully functional and visually appealing blog platform that connects to a blog API, while also including an admin panel with post management features.',
+    timeline: '5 weeks',
+    year: '2024',
+    link: 'https://norofffeu.github.io/SoundWaves/',
+    code: 'https://github.com/NoroffFEU/SoundWaves',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    documentation: SOUNDWAVES_PROCESS,
+  },
+  {
+    title: 'Community Science Museum',
+    name: 'Community Science Museum',
+    slug: 'community-science-museum',
+    image: '/projects/csm/csm-thumbnail.webp',
+    subtitle: 'A responsive website designed for a children’s science museum',
+    description:
+      'A responsive website designed for a children’s science museum, targeting ages 7 to 15. Built with only HTML and CSS, the site offers an engaging, friendly interface focused on accessibility, clear structure, and visual appeal.',
+    context:
+      'CSM was my second project during the first year of my front-end studies at Noroff. The assignment simulated a client brief where I had to plan, design, and implement a public-facing site for a fictional museum. The focus was on applying fundamental HTML and CSS skills to deliver a functional, attractive, and audience-appropriate interface. JavaScript was not permitted, which pushed me to explore advanced CSS techniques, including nesting and responsive layout strategies.',
+    timeline: '2 weeks',
+    year: '2023',
+    link: 'https://whisperpiano.github.io/CommunityScienceMuseum/index.html',
+    code: 'https://github.com/Whisperpiano/CommunityScienceMuseum',
+    stack: ['HTML', 'CSS', 'Figma'],
+    documentation: CSM_PROCESS,
+  },
+  {
+    title: 'GameOn',
+    name: 'GameOn',
+    slug: 'gameon',
+    image: '/projects/gameon/gameon-thumbnail.webp',
+    subtitle:
+      'Online storefront where users can browse and purchase video games',
+    description:
+      'GameOn is an online storefront where users can browse and purchase video games. Built with HTML, CSS, and vanilla JavaScript, the site fetches game data from an external API and includes product detail views, a working cart, and a dynamic search system.',
+    context:
+      'This was my very first project at Noroff, created during the first semester of the Front-end Development program. The goal was to build a functional, responsive e-commerce website using only native web technologies. I focused on applying basic design principles, practicing clean JavaScript structure, and rendering pages dynamically from a real API.',
+    timeline: '2 weeks',
+    year: '2023',
+    link: 'https://whisperpiano.github.io/GameOn/home/index.html',
+    code: 'https://github.com/Whisperpiano/GameOn',
+    stack: ['HTML', 'CSS', 'JavaScript'],
+    documentation: GAMEON_PROCESS,
   },
 ];
 
 export type Project = (typeof PROJECTS)[number];
+export type FeaturedProject = (typeof FEATURED_PROJECTS)[number];

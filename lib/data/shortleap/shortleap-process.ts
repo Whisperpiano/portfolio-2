@@ -1,37 +1,45 @@
 export const SHORTLEAP_PROCESS = {
-  challenge:
-    'Shortleap was developed as a fullstack application challenge, where the objective was to go beyond the frontend and design a complete solution from database to user interface. Built with Next.js, TypeScript, Drizzle ORM, Turso, and Auth.js, the project combines backend logic, authentication, analytics, and a responsive, user-focused interface. This project reflects my ability to plan, implement, and polish a full product experience — including technical depth, clean design, and attention to performance.',
-  process: {
+  features: {
     text: 'Shortleap is a custom URL shortener built entirely from scratch. It includes user authentication, link management, analytics tracking, and UI/UX polish through animations and visual feedback. The backend uses a relational database (Turso) with Drizzle ORM, and the frontend is crafted with React, Tailwind CSS, and Recharts for data visualization. All features are designed to be accessible, responsive, and scalable.',
     list: {
       text: 'Key features implemented:',
       items: [
         {
-          title: 'Authentication System',
-          text: 'Secure login and registration flow using Auth.js, supporting both OAuth (GitHub, Google) and credentials. Sessions are managed with JWTs, and protected routes ensure that only authenticated users can access the dashboard. This provides a seamless experience while enforcing security best practices.',
+          title: 'Custom URL Shortening',
+          text: 'Users can generate personalized short links with optional slugs, ensuring readability and branding. Input is validated and stored securely in a Turso database using Drizzle ORM.',
+          image: '/projects/shortleap/shortleap-urls.webp',
         },
         {
-          title: 'Custom Link Management',
-          text: 'Users can create short links with custom slugs, which are validated and stored in a Turso database. The dashboard lists all user-created links with features like search, sorting, and deletion. This empowers users to manage their content intuitively and efficiently.',
-          image: '/projects/shortleap/shortleap-dashboard.webp',
+          title: 'Real-Time Click Analytics',
+          text: 'Every visit is tracked with metadata including timestamp, geolocation (country, region, city), device, OS, and browser. Data is visualized with Recharts for clear insights into link performance.',
+          image: '/projects/shortleap/shortleap-analytics.webp',
         },
         {
-          title: 'Click Analytics',
-          text: 'Each visit to a short link is logged with detailed metadata: timestamp, browser, operating system, country, region, city, and device type. This data is aggregated and displayed with Recharts (bar and pie charts), allowing users to monitor the performance of their links in real time.',
-          image: '/projects/shortleap/test2.png',
+          title: 'QR Code Generation',
+          text: 'Each link automatically generates a scannable QR code, enabling fast access across devices and extending usability to print and offline scenarios.',
+          image: '/projects/shortleap/shortleap-qrcodes.webp',
         },
         {
-          title: 'Copy and QR Features',
-          text: 'Users can instantly copy short links to the clipboard or generate a QR code with one click. These actions are enhanced with smooth animations and tooltips, improving usability and supporting mobile and offline use cases.',
-          image: '/projects/shortleap/shortleap-qr-codes.webp',
+          title: 'Authentication and Access Control',
+          text: 'Auth.js manages secure login via credentials and OAuth (GitHub, Google). JWT-based sessions protect user data and restrict dashboard access to authenticated users.',
         },
         {
-          title: 'Server Middleware for Click Tracking',
-          text: 'A custom Next.js middleware intercepts requests to short URLs, fetches the corresponding target link from the database, logs the visit with geolocation and user-agent data, and redirects the user. This logic runs server-side for accuracy and performance.',
+          title: 'Server-Side Middleware for Analytics',
+          text: 'Custom Next.js middleware intercepts shortlink requests to handle redirects and log click data accurately from the server side, ensuring better performance and data reliability.',
+        },
+        {
+          title: 'Per-User Limits and Admin Controls',
+          text: 'Users are limited to a configurable number of links. Admin-defined global settings are stored in the database, allowing for centralized control over application constraints.',
+        },
+        {
+          title: 'Modern, Scalable Stack',
+          text: 'The app is built with Next.js, Drizzle ORM, Turso, Tailwind CSS, and Recharts. Emphasis is placed on performance, scalability, responsive design, and clean UI with accessible interactions.',
+        },
+        {
+          title: 'Enhanced UX with Visual Feedback',
+          text: 'Animations, transitions, and contextual tooltips offer a refined experience, improving usability and guiding user actions without interrupting workflows.',
         },
       ],
     },
   },
-  solution:
-    'Shortleap demonstrates my ability to deliver a full product from backend logic to frontend polish. The result is a performant, modern, and user-friendly URL shortener that balances technical architecture with thoughtful UI. This project allowed me to deepen my experience in backend development while applying advanced frontend practices.',
 };

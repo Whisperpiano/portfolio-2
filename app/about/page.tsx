@@ -1,15 +1,13 @@
-import { X } from 'lucide-react';
 import { GALLERY_IMAGES } from '@/lib/data/gallery';
 import { Metadata } from 'next';
 import { EscapeToHome } from '@/components/escape-to-home';
 
-import Link from 'next/link';
 import AboutCard from '@/components/about/about-card';
 import GallerySlider from '@/components/about/gallery-slider';
 import ExperienceCard from '@/components/about/experience/experience-card';
 import InterestGrid from '@/components/about/interests/interest-grid';
 import QuoteCard from '@/components/about/quote-card';
-import IconButton from '@/components/shared/icon-button';
+import GoBackButton from '@/components/go-back-button';
 
 export const metadata: Metadata = {
   title: 'About | Whisperpiano',
@@ -22,9 +20,7 @@ export default function About() {
       <EscapeToHome />
       <section className="min-h-[calc(100vh-32px)] rounded-3xl border-0 sm:border-2">
         <div className="flex items-center justify-center py-8 sm:py-12 lg:py-20">
-          <Link href="/" className="cursor-pointer" prefetch>
-            <IconButton icon={X} />
-          </Link>
+          <GoBackButton />
         </div>
 
         <section className="mx-auto grid max-w-5xl grid-cols-1 gap-4 p-4 lg:grid-cols-2">

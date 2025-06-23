@@ -1,10 +1,14 @@
-import { type Project } from '@/lib/data/projects';
+import { type Project, type FeaturedProject } from '@/lib/data/projects';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function ProjectCard({ project }: { project: Project }) {
+export default function ProjectCard({
+  project,
+}: {
+  project: Project | FeaturedProject;
+}) {
   return (
     <Link
       key={project.title}
