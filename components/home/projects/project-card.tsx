@@ -34,7 +34,7 @@ export default function ProjectCard({
           </div>
 
           <div className="absolute bottom-9 left-6 z-20 translate-y-8 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-            <p className="text-muted-foreground/75 line-clamp-3 text-sm">
+            <p className="text-muted-foreground/75 me-20 line-clamp-3 text-sm">
               {project.subtitle}
             </p>
           </div>

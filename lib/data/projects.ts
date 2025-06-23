@@ -90,6 +90,7 @@ export const PROJECTS = [
   {
     title: 'Bidly',
     name: 'Bidly',
+    slug: 'bidly',
     year: '2024',
     image: '/projects/bidly/bidly-thumbnail.webp',
     subtitle: 'A secure and simple way to auction among peers with a modern UI',
