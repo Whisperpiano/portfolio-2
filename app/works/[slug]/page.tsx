@@ -4,16 +4,11 @@ import { notFound } from 'next/navigation';
 import { ShareButton } from '@/components/ui/share-button';
 import { BackToTop } from '@/components/back-to-top';
 import { EscapeToHome } from '@/components/escape-to-home';
-import { X } from 'lucide-react';
 
-import Link from 'next/link';
-import IconButton from '@/components/shared/icon-button';
 import ProjectThumbnail from '@/components/works/header/project-thumbnail';
 import ProjectDetails from '@/components/works/header/project-details';
 import ProjectOverview from '@/components/works/header/project-overview';
-import ChallengeSection from '@/components/works/body/challenge-section';
 import ProcessSection from '@/components/works/body/process-section';
-import SolutionSection from '@/components/works/body/solution-section';
 import ProjectNavigation from '@/components/works/footer/navigation/project-navigation';
 import GoBackButton from '@/components/go-back-button';
 

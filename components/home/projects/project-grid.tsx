@@ -1,5 +1,6 @@
-import { FEATURED_PROJECTS, PROJECTS } from '@/lib/data/projects';
+import { FEATURED_PROJECTS } from '@/lib/data/projects';
 import { Plus } from 'lucide-react';
+
 import ProjectCard from './project-card';
 import Link from 'next/link';
 

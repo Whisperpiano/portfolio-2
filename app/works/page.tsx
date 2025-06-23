@@ -1,10 +1,10 @@
 import { PROJECTS } from '@/lib/data/projects';
-import { Card, CardContent } from '@/components/ui/card';
-import { ArrowUpRight, ChevronLeft, X, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
-import ProjectCard from '@/components/home/projects/project-card';
+import { X } from 'lucide-react';
 import { EscapeToHome } from '@/components/escape-to-home';
 import { BackToTop } from '@/components/back-to-top';
+
+import Link from 'next/link';
+import ProjectCard from '@/components/home/projects/project-card';
 import IconButton from '@/components/shared/icon-button';
 
 export const metadata = {

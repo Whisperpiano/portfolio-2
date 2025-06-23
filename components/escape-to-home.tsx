@@ -17,7 +17,7 @@ export const EscapeToHome = () => {
     return () => {
       window.removeEventListener('keydown', handleEscape);
     };
-  }, []);
+  }, [handleEscape]);
 
   return null;
 };
