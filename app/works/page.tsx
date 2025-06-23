@@ -13,7 +13,6 @@ export const metadata = {
 };
 
 export default function Works() {
-  // Agrupar proyectos por año
   const projectsByYear = PROJECTS.reduce<Record<string, typeof PROJECTS>>(
     (acc, project) => {
       const year = project.year || 'Unknown';
