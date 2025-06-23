@@ -134,7 +134,7 @@ export const PROJECTS = [
     context:
       'This was the final project of my first year at Noroff, designed to demonstrate everything I had learned about front-end development using only HTML, CSS, and JavaScript. The challenge was to build a fully functional and visually appealing blog platform that connects to a blog API, while also including an admin panel with post management features.',
     timeline: '3 weeks',
-    year: '2023',
+    year: '2024',
     link: 'https://your-deployed-url.com',
     code: 'https://github.com/Whisperpiano/Soundwaves',
     stack: ['HTML', 'CSS', 'JavaScript'],

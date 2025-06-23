@@ -1,9 +1,7 @@
 import { PROJECTS } from '@/lib/data/projects';
 import { Card, CardContent } from '@/components/ui/card';
 import { ArrowUpRight, ChevronLeft, X, ExternalLink } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
-import { cn } from '@/lib/utils';
 import ProjectCard from '@/components/home/projects/project-card';
 import { EscapeToHome } from '@/components/escape-to-home';
 import { BackToTop } from '@/components/back-to-top';
@@ -55,9 +53,8 @@ export default function Works() {
             </div>
           </div>
 
-          {years.map((year, yearIndex) => {
+          {years.map((year) => {
             const projects = projectsByYear[year];
-            const hasEnoughProjects = projects.length >= 3;
 
             return (
               <section key={year} className="mb-32">
@@ -69,14 +66,7 @@ export default function Works() {
                   </div>
                 </div>
 
-                <div
-                  className={cn(
-                    'grid gap-6',
-                    hasEnoughProjects
-                      ? 'grid-cols-1 md:grid-cols-12'
-                      : 'grid-cols-1 md:grid-cols-2',
-                  )}
-                >
+                <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
                   {projects.map((project) => {
                     return (
                       <ProjectCard key={project.title} project={project} />
