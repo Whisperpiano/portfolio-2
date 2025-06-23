@@ -1,4 +1,4 @@
-import { PROJECTS } from '@/lib/data/projects';
+import { FEATURED_PROJECTS, PROJECTS } from '@/lib/data/projects';
 import { Plus } from 'lucide-react';
 import ProjectCard from './project-card';
 import Link from 'next/link';
@@ -9,7 +9,7 @@ export default function ProjectGrid() {
       {/* projects */}
       <section className="lg:col-span-9">
         <div className="flex h-full flex-wrap gap-4">
-          {PROJECTS.map((project) => (
+          {FEATURED_PROJECTS.map((project) => (
             <ProjectCard key={project.title} project={project} />
           ))}
         </div>
